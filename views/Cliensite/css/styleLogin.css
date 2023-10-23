@@ -40,11 +40,15 @@
 }
 
 .input{
+    
+    justify-content: center;
     position: relative;
     top:-60px;
+    width: 100%;
+
 }
 .input input {
-    width: 400px;
+    width: 70%;
     padding: 10px;
     border-radius: 5px;
     
@@ -60,6 +64,46 @@
 .account .block form{
     margin-top:80px;
 }
+
+
+
+div .tab-content form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div .tab-content form button{
+    margin-left: 10px;
+    background: #000;
+    color:#fff;
+    height: 40px;
+    border:none;
+    border-radius: 2px;
+}
+
+div .tab-content form .comentario{
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 2px; 
+}
+
+#agregar{
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    border: none;
+}
+
+#agregar:hover{
+    outline: 0;
+    color:#fff;
+    background-color: #000;
+}
+
+
 
 
 

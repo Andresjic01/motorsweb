@@ -640,8 +640,8 @@ function modalProductos(){
                             <p class="product-short-description">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
                             </p>
-                            <a href="cart.html" class="btn btn-main">Add To Cart</a>
-                            <a href="product-single.html" class="btn btn-transparent">View Product Details</a>
+                            <a href="cart.html" class="btn btn-main">Añadir al carrito</a>
+                            <a href="product-single.php?id='.$f['IdProducto'].'" class="btn btn-transparent">Ver detalles del producto</a>
                         </div>
                     </div>
                 </div>
@@ -903,6 +903,177 @@ function modalFormCitaTaller(){
 			</div>
             ';
     }
+}
+
+//Esta funcion muestra los productos a detalle unico
+function productounico(){
+
+    $idCli= $_SESSION['id'];
+
+    $producto=$_GET['id'];
+
+    $objConsultas = new consultas();
+    $result = $objConsultas->productoUnico($producto);
+
+
+
+    foreach ($result as $f){
+        echo'
+        <div class="row mt-20">
+			<div class="col-md-5">
+				<div class="single-product-slider">
+					<div id="carousel-custom" class="carousel slide" data-ride="carousel">
+						<div class="carousel-outer">
+							<!-- me art lab slider -->
+							<div class="carousel-inner ">
+								<div class="item active">
+									<img src="../'.$f['Foto1'].'" alt="" data-zoom-image="../'.$f['Foto1'].'" style="width:100%; height: 400px;"/>
+								</div>
+								<div class="item">
+									<img src="../'.$f['Foto2'].'" alt="" data-zoom-image="../'.$f['Foto2'].'" style="width:100%; height: 400px;"/>
+								</div>
+								
+								<div class="item">
+									<img src="../'.$f['Foto3'].'" alt="" data-zoom-image="../'.$f['Foto3'].'" style="width:100%; height: 400px;"/>
+								</div>
+								<div class="item">
+									<img src="../'.$f['Foto4'].'" alt="" data-zoom-image="../'.$f['Foto4'].'" style="width:100%; height: 400px;"/>
+								</div>
+								
+							</div>
+							
+							<!-- sag sol -->
+							<a class="left carousel-control" href="#carousel-custom" data-slide="prev">
+								<i class="tf-ion-ios-arrow-left"></i>
+							</a>
+							<a class="right carousel-control" href="#carousel-custom" data-slide="next">
+								<i class="tf-ion-ios-arrow-right"></i>
+							</a>
+						</div>
+						
+						<!-- thumb -->
+						<ol class="carousel-indicators mCustomScrollbar meartlab">
+							<li data-target="#carousel-custom" data-slide-to="0" class="active">
+								<img src="../'.$f['Foto1'].'" alt="" style="height: 50px;"/>
+							</li>
+							<li data-target="#carousel-custom" data-slide-to="1">
+								<img src="../'.$f['Foto2'].'" alt="" style="height: 50px;"/>
+							</li>
+							<li data-target="#carousel-custom" data-slide-to="2">
+								<img src="../'.$f['Foto3'].'" alt="" style="height: 50px;"/>
+							</li>
+							<li data-target="#carousel-custom" data-slide-to="3">
+								<img src="../'.$f['Foto4'].'" alt=""  style="height: 50px;"/>
+							</li>
+							
+						</ol>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div class="single-product-details">
+					<h2>'.$f['NomProducto'].'</h2>
+					<p class="product-price">'.$f['Precio'].'</p>
+					
+					<p class="product-description mt-20">
+						ESPACION PARA LA DECRIpCION 
+                        
+					</p>
+					
+					
+					<div class="product-size">
+						<span>Size:</span>
+						<select class="form-control">
+							<option>S</option>
+							<option>M</option>
+							<option>L</option>
+							<option>XL</option>
+						</select>
+					</div>
+					<div class="product-quantity">
+						<span>Cantidad:</span>
+						<div class="product-quantity-slider">
+							<input id="product-quantity" type="text" value="0" name="product-quantity">
+						</div>
+					</div>
+					<div class="product-category">
+						<span>Categorias:</span>
+						<ul>
+							<li><a href="product-single.html">Productos</a></li>
+							<li><a href="product-single.html">Llant</a></li>
+						</ul>
+					</div>
+					<a href="cart.html" class="btn btn-main mt-20">Añadir al carrito</a>
+				</div>
+			</div>
+		</div>
+        
+        ';
+    }
+
+
+
+
+
+}
+
+function comentarios(){
+
+    $idCli= $_SESSION['id'];
+
+    $producto=$_GET['id'];
+
+    $objConsultas = new consultas();
+    $result = $objConsultas->mostrarComentarios($producto);
+
+
+    if (!isset($result)) {
+        echo '<h2>Se el primero en comentar</h2>';
+    } else {
+    foreach ($result as $f){
+        echo'
+        <div class="post-comments">
+						    	<ul class="media-list comments-list m-bot-50 clearlist">
+								    <!-- Comment Item start-->
+								    <li class="media">
+
+								        <a class="pull-left" href="#!">
+								            <img class="media-object comment-avatar" src="../'.$f['Foto'].'" alt="" width="50" height="50" />
+								        </a>
+
+								        <div class="media-body">
+								            <div class="comment-info">
+								                <h4 class="comment-author">
+								                    <a href="#!">'.$f['Nombres'].'</a>
+								                	
+								                </h4>
+								                <time datetime="2013-04-06T13:53">'.$f['Fecha'].'</time>
+								                <a class="comment-button" href="#!"><i class="tf-ion-chatbubbles"></i>Reply</a>
+								            </div>
+
+								            <p>
+								                '.$f['Comentario'].'
+								            </p>
+								        </div>
+
+								    </li>
+								    <!-- End Comment Item -->  
+							</ul>
+							</div>
+                            
+        ';
+    }}
+    echo '
+    <div class="Comentarios">
+			<h4 style="text-align:center;">¿Quieres agragar un comentario?</h4>
+			<form action="../../controllers/agregarcomentarioCliente.php" method="POST" id="formularioCom">
+                    <input type="hidden" name="cliente" value="'.$idCli.'">
+                    <input type="hidden" name="producto" value="'.$producto.'">
+                    <input class="comentario" type="text"  name="comentario" >
+				    <button type="submit" value="comentar">Comentar</button>
+			</form>
+	</div>';
+
 }
 
 ?>

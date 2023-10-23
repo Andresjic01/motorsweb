@@ -5,7 +5,6 @@ require_once("../../models/seguridadCliente.php");
 require_once("../../controllers/mostrarInfoCliente.php");
 ?>
 
-
 <!DOCTYPE html>
 
 <!--
@@ -21,7 +20,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Motors Web</title>
+  <title>MotorsWeb</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -31,15 +30,8 @@ require_once("../../controllers/mostrarInfoCliente.php");
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
   
-  <!-- theme meta -->
-  <meta name="theme-name" content="aviato" />
-  
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="../Cliensite/images/favicon.png" />
-
-  <!-- icons -->
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
   
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="../Cliensite/plugins/themefisher-font/style.css">
@@ -54,12 +46,10 @@ require_once("../../controllers/mostrarInfoCliente.php");
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="../Cliensite/css/style.css">
-  
 
 </head>
 
 <body id="body">
-
 
 <?php
 	include("include-pag.php")
@@ -70,10 +60,10 @@ require_once("../../controllers/mostrarInfoCliente.php");
 		<div class="row">
 			<div class="col-md-12">
 				<div class="content">
-					<h1 class="page-name">Servicios</h1>
+					<h1 class="page-name">Carrito</h1>
 					<ol class="breadcrumb">
-						<li><a href="home.php">inicio</a></li>
-						<li class="active">Servicios</li>
+						<li><a href="index.html">inicio</a></li>
+						<li class="active">carrito</li>
 					</ol>
 				</div>
 			</div>
@@ -82,27 +72,51 @@ require_once("../../controllers/mostrarInfoCliente.php");
 </section>
 
 
-<section class="products section">
-	<div class="container">
-		<div class="row">
-			
-			<?php
-				mostrarServiciosIndexcliente();
-			?>
 
-			<?php
-				modal();
-			?>
-      		<?php
-				modalForm();
-			?>
-			
+<div class="page-wrapper">
+  <div class="cart shopping">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 ">
+          <div class="block">
+            <div class="product-list">
+				<h2 style="margin-bottom:19px ;">Productos</h2>
+				
+              <form method="POST">
+                <table class="table">
+                  <tbody>
+                    <tr class="">
+                      <td class="">
+                        <div class="product-info">
+                          <img width="80" src="../Cliensite/images/shop/cart/cart-1.jpg" alt="" />
+                          <a href="#!">Sunglass</a>
+                        </div>
+                      </td>
+                      <td class="">$200.00</td>
+                      <td class="">
+                        <a class="product-remove" href="#!">Eliminar</a>
+                      </td>
+                    </tr>
+					
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
 
+		<div class="col-md-4">
+			<h2>Resumen de compra</h2>
+			<hr>
+			<p>Productos</p>
+			<p>Envio</p>
+			<p><strong>Total</strong></p>
+			<button>Continuar compra</button>
 		</div>
-	</div>
-</section>
-
-
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <footer class="footer section text-center">
@@ -120,16 +134,29 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							<i class="tf-ion-social-instagram"></i>
 						</a>
 					</li>
+					<li>
+						<a href="https://www.twitter.com/themefisher">
+							<i class="tf-ion-social-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.pinterest.com/themefisher/">
+							<i class="tf-ion-social-pinterest"></i>
+						</a>
+					</li>
 				</ul>
 				<ul class="footer-menu text-uppercase">
 					<li>
-						<a href="denunciar.php">¿Tienes alguna queja?</a>
+						<a href="contact.html">CONTACT</a>
 					</li>
 					<li>
-						<a href="shop-slidebar.html">REPUESTOS</a>
+						<a href="shop.html">SHOP</a>
 					</li>
 					<li>
-						<a href="#">POLITICAS DE PRIVACIDAD</a>
+						<a href="pricing.html">Pricing</a>
+					</li>
+					<li>
+						<a href="contact.html">PRIVACY POLICY</a>
 					</li>
 				</ul>
 				<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></p>
@@ -141,8 +168,6 @@ require_once("../../controllers/mostrarInfoCliente.php");
     <!-- 
     Essential Scripts
     =====================================-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
     
     <!-- Main jQuery -->
     <script src="../Cliensite/plugins/jquery/dist/jquery.min.js"></script>
@@ -163,7 +188,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 
     <!-- Google Mapl -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-    <script type="text/javascript" src="../Cliensite/plugins/google-map/gmap.js"></script>
+    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 
     <!-- Main Js File -->
     <script src="../Cliensite/js/script.js"></script>

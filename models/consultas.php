@@ -1350,7 +1350,6 @@
 
         }
 
-
         //Registrar una queja 
         public function insertarDenunciaCliente($usuario, $nombreUsuario, $asunto, $descripcion){
             $objConexion = new Conexion();
@@ -1548,6 +1547,77 @@
             return $f;
 
         }
+
+        //mostrar productos para la seccion de detalles de unico producto
+        public function productoUnico($producto){
+            $f = null;
+
+            $objConexion = new Conexion();
+            $conexion = $objConexion -> get_conexion();
+
+            $buscar ="SELECT * FROM productos WHERE idProducto=:producto";
+            $result = $conexion -> prepare($buscar);
+
+            $result -> bindParam(":producto", $producto);
+
+            $result-> execute();
+
+            while ($resultado = $result->fetch()){
+                $f[] = $resultado;
+            }
+            
+            return $f;
+        }
+
+        //Registar comentario de un producto
+        public function enviarComentarioCli($comentario,$producto, $cliente, $fecha){
+            
+            $objConexion = new Conexion();
+            $conexion = $objConexion -> get_conexion();
+
+            $comentarios="INSERT INTO comentarios (ProductoId, IdCliente, Comentario, Fecha) VALUES(:producto, :cliente,:comentario, :fecha)";
+            $result = $conexion -> prepare($comentarios);
+
+            $result->bindParam(":comentario", $comentario);
+            $result->bindParam(":producto", $producto);
+            $result->bindParam(":cliente", $cliente);
+            $result->bindParam(":fecha", $fecha);
+            
+
+            $result->execute();
+
+            echo '<script> location.href = "../views/Cliente/product-single.php?id='.$producto.'"</script>';
+            
+
+        }
+
+        //mostrar comentarios DE LOS PRODUCTOS
+        public function mostrarComentarios($producto){
+            $f = null;
+
+            $objConexion = new Conexion();
+            $conexion = $objConexion -> get_conexion();
+
+            $buscar ="SELECT * FROM comentarios A
+            INNER JOIN productos B ON A.ProductoId = B.IdProducto
+            INNER JOIN usuarios C ON A.IdCliente = C.Identificacion
+            WHERE ProductoId=:producto";
+
+            $result = $conexion -> prepare($buscar);
+
+            $result -> bindParam(":producto", $producto);
+            
+
+            $result-> execute();
+
+            while ($resultado = $result->fetch()){
+                $f[] = $resultado;
+            }
+            
+            return $f;
+        }
+            
+
 
 
 

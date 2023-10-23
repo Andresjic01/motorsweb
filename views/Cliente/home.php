@@ -36,6 +36,10 @@ require_once("../../controllers/mostrarInfoCliente.php");
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="../Cliensite/images/favicon.png" />
   
+  <!-- icons -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="../Cliensite/plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
@@ -459,6 +463,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
     <!-- 
     Essential Scripts
     =====================================-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     
     <!-- Main jQuery -->
     <script src="../Cliensite/plugins/jquery/dist/jquery.min.js"></script>
@@ -478,7 +483,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
     <script src="../Cliensite/plugins/slick/slick-animation.min.js"></script>
 
     <!-- Google Mapl -->
-    <script src="../Cliensite/https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
     <script type="text/javascript" src="../Cliensite/plugins/google-map/gmap.js"></script>
 
     <!-- Main Js File -->
