@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2023 a las 03:18:33
+-- Tiempo de generación: 24-10-2023 a las 11:01:26
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.2
 
@@ -49,6 +49,20 @@ INSERT INTO `citas` (`IdCita`, `Cliente`, `Taller`, `Fecha`, `Hora`, `Servicio`,
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `comentarios`
+--
+
+CREATE TABLE `comentarios` (
+  `IdComentario` int(40) NOT NULL,
+  `ProductoId` int(11) NOT NULL,
+  `IdCliente` varchar(50) NOT NULL,
+  `Comentario` varchar(200) NOT NULL,
+  `Fecha` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `factura`
 --
 
@@ -78,16 +92,18 @@ CREATE TABLE `productos` (
   `Foto2` varchar(200) NOT NULL,
   `Foto3` varchar(200) NOT NULL,
   `Foto4` varchar(200) NOT NULL,
-  `InfoVendedor` varchar(50) NOT NULL
+  `InfoVendedor` varchar(50) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`IdProducto`, `NomProducto`, `Proveedor`, `Cantidad`, `Precio`, `Categoria`, `Foto1`, `Foto2`, `Foto3`, `Foto4`, `InfoVendedor`) VALUES
-(12, 'pechera', 'chevrolet', 3, 9000, 'Repuesto interno', '../Uploads/Productos/CambiodeAceite.jpg', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/Revisar la suspencion.jpg', '../Uploads/Productos/', '1004510352'),
-(122, 'Llanta', 'chevrolet', 3, 9000, 'Repuesto externo', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/', '../Uploads/Productos/', '../Uploads/Productos/', '1004510352');
+INSERT INTO `productos` (`IdProducto`, `NomProducto`, `Proveedor`, `Cantidad`, `Precio`, `Categoria`, `Foto1`, `Foto2`, `Foto3`, `Foto4`, `InfoVendedor`, `Descripcion`) VALUES
+(12, 'pechera', 'chevrolet', 3, 9000, 'Repuesto interno', '../Uploads/Productos/CambiodeAceite.jpg', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/Revisar la suspencion.jpg', '../Uploads/Productos/CambiodeAceite.jpg', '1004510352', ''),
+(122, 'Llanta', 'chevrolet', 3, 9000, 'Repuesto externo', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/Revisar la suspencion.jpg', '../Uploads/Productos/CambiodeAceite.jpg', '1004510352', ''),
+(1222, 'Llantas', 'chevrolet', 3, 9000, 'Repuesto externo', '../Uploads/Productos/Revisar la suspencion.jpg', '../Uploads/Productos/Cambio de aceite1.jpg', '../Uploads/Productos/Revisar la suspencion.jpg', '../Uploads/Productos/CambiodeAceite.jpg', '1004510352', '');
 
 -- --------------------------------------------------------
 
@@ -145,17 +161,19 @@ CREATE TABLE `usuarios` (
   `Clave` varchar(40) NOT NULL,
   `Rol` varchar(20) NOT NULL,
   `Estado` varchar(15) NOT NULL,
-  `Foto` varchar(200) NOT NULL
+  `Foto` varchar(200) NOT NULL,
+  `Descripcion` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`Identificacion`, `TipoDocumento`, `Nombres`, `Apellidos`, `Email`, `Direccion`, `Telefono`, `Clave`, `Rol`, `Estado`, `Foto`) VALUES
-('1004510351', 'Cc', 'Favian', 'Mancilla', 'favian@misena.edu.co', '', '3115662350', '202cb962ac59075b964b07152d234b70', 'Cliente', 'Activo', ''),
-('1004510352', 'Cc', 'Melani ', 'Mancilla', 'Melani@gmail.com', '', '3115662340', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', ''),
-('1004510353', 'Cc', 'Andres', 'Angulo', 'Andres@gmail.com', '', '3115662360', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', '');
+INSERT INTO `usuarios` (`Identificacion`, `TipoDocumento`, `Nombres`, `Apellidos`, `Email`, `Direccion`, `Telefono`, `Clave`, `Rol`, `Estado`, `Foto`, `Descripcion`) VALUES
+('1004510351', 'Cc', 'Favian', 'Mancilla', 'favian@misena.edu.co', '', '3115662350', '202cb962ac59075b964b07152d234b70', 'Cliente', 'Activo', '../Uploads/Usuarios/perfil1.jpg', ''),
+('1004510352', 'Cc', 'Melani ', 'Mancilla', 'Melani@gmail.com', '', '3115662340', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', '', ''),
+('1004510353', 'Cc', 'Andres', 'Angulo', 'Andres@gmail.com', '', '3115662360', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', '', ''),
+('1004510354', 'Cc', 'Alexis', 'Mancilla', 'fabianmancilla0708@gmail.com', '', '3115662359', '202cb962ac59075b964b07152d234b70', 'Administrador', 'Activo', '', '');
 
 -- --------------------------------------------------------
 
@@ -184,6 +202,14 @@ ALTER TABLE `citas`
   ADD PRIMARY KEY (`IdCita`),
   ADD KEY `Cliente` (`Cliente`),
   ADD KEY `Taller` (`Taller`);
+
+--
+-- Indices de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD PRIMARY KEY (`IdComentario`),
+  ADD KEY `IdCliente` (`IdCliente`),
+  ADD KEY `ProductoId` (`ProductoId`);
 
 --
 -- Indices de la tabla `factura`
@@ -235,6 +261,12 @@ ALTER TABLE `citas`
   MODIFY `IdCita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT de la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  MODIFY `IdComentario` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
 -- AUTO_INCREMENT de la tabla `factura`
 --
 ALTER TABLE `factura`
@@ -244,7 +276,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `IdProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `IdProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1223;
 
 --
 -- AUTO_INCREMENT de la tabla `quejas`
@@ -268,6 +300,14 @@ ALTER TABLE `servicios`
 ALTER TABLE `citas`
   ADD CONSTRAINT `citas_ibfk_1` FOREIGN KEY (`Cliente`) REFERENCES `usuarios` (`Identificacion`),
   ADD CONSTRAINT `citas_ibfk_2` FOREIGN KEY (`Taller`) REFERENCES `usuarios` (`Identificacion`);
+
+--
+-- Filtros para la tabla `comentarios`
+--
+ALTER TABLE `comentarios`
+  ADD CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`IdCliente`) REFERENCES `usuarios` (`Identificacion`),
+  ADD CONSTRAINT `comentarios_ibfk_2` FOREIGN KEY (`ProductoId`) REFERENCES `productos` (`IdProducto`),
+  ADD CONSTRAINT `comentarios_ibfk_3` FOREIGN KEY (`ProductoId`) REFERENCES `productos` (`IdProducto`);
 
 --
 -- Filtros para la tabla `productos`
