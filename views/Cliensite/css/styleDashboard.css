@@ -1,0 +1,84 @@
+:root{
+    --colorPrimario: #000;
+    --colorSegundario: #D21312;
+}
+
+.sidebar{
+    background: var(--colorPrimario);
+}
+.logo{
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+}
+
+.sidebar .nano-content>ul li>a{
+    background: var(--colorPrimario);
+    color: #ffffff;
+}
+
+.sidebar .nano-content>ul>li.active>a, .sidebar .nano-content>ul>li.open>a, .sidebar .nano-content>ul>li>ul{
+    background: var(--colorSegundario);
+    color: #ffffff;
+}
+.sidebar .nano-content>ul li.active>a::before{
+    background: #0e57cd;
+    color: #ffffff;
+}
+.sidebar .nano-content>ul li>a:hover{
+    background: var(--colorSegundario);
+    color: #ffffff;
+    
+}
+
+.sidebar .nano-content>ul>li>ul>li.active>a, .sidebar .nano-content>ul>li>ul>li.open>a, .sidebar .nano-content>ul>li>ul>li>ul{
+    background: var(--colorSegundario);
+    color: #ffffff;
+    
+}
+
+.product-modal .modal-content{
+    margin-top: 40px ;
+    height: 500px;
+}
+.logo{
+    background-color: transparent;
+}
+
+.card{
+    
+    border-radius: 20px;
+}
+
+
+.bg-body-tertiary{
+    background-color: #ffffff !important;
+    display: grid;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0 5px;
+}
+
+.navbar-expand-lg .navbar-collapse a:hover{
+    background-color: var(--colorPrimario);
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+
+#texto{
+    text-align:center;
+    font-size: 30px;
+    border: 1px solid var(--colorPrimario);
+    flex-direction: column;
+}
+
+
+
+

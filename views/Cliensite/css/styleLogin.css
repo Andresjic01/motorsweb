@@ -1,0 +1,111 @@
+#body{
+    background: url(../images/backgrounds/fondoLogin.jpg) 100%;
+    background-size: cover;
+}
+#body2{
+    background: url(../images/backgrounds/fondosingin.jpg) 100%;
+    background-size: cover;
+}
+
+.block{
+    border-radius: 15px;
+    backdrop-filter: blur(10px);  
+}
+
+.account .block{
+    background-color: transparent;
+    color: white;
+    border: 1px solid black;
+}
+
+.account .block p{
+    color: white; 
+}
+
+.account .block a{
+    color: white; 
+}
+
+.logo{
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.form-group{
+    border-radius: 15px;
+}
+
+.account .block form input[type=email], .account .block form input[type=password], .account .block form input[type=text]{
+    border-radius: 15px;
+}
+
+.input{
+    
+    justify-content: center;
+    position: relative;
+    top:-60px;
+    width: 100%;
+
+}
+.input input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+.input .buscar {
+    width: 70px;
+    background-color: black;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.account .block form{
+    margin-top:80px;
+}
+
+
+
+div .tab-content form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div .tab-content form button{
+    margin-left: 10px;
+    background: #000;
+    color:#fff;
+    height: 40px;
+    border:none;
+    border-radius: 2px;
+}
+
+div .tab-content form .comentario{
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 2px; 
+}
+
+#agregar{
+    font-size: 20px;
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    border: none;
+}
+
+#agregar:hover{
+    outline: 0;
+    color:#fff;
+    background-color: #000;
+}
+
+
+
+
+
+
+
