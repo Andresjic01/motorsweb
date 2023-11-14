@@ -43,6 +43,7 @@ require_once("controllers/mostrarInfoCliente.php");
 	<!-- Themefisher Icon font -->
 	<link rel="stylesheet" href="views/Cliensite/plugins/themefisher-font/style.css">
 	<!-- bootstrap.min css -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="views/Cliensite/plugins/bootstrap/css/bootstrap.min.css">
 
 	<!-- Animate css -->
@@ -347,96 +348,77 @@ require_once("controllers/mostrarInfoCliente.php");
 	</div>
 </section> -->
 
-	<section class="products section bg-gray">
-		<div class="container">
-			<div class="row">
-				<div class="title text-center">
-					<h2>Mas vendidos</h2>
-				</div>
-			</div>
-			<div class="row">
-			<!-- <div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" style="max-height:400px;" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div> -->
-
-			<?php
-				mostrarProductosindex()
-			?>
-
+	<!-- MAIN-lealjh -->
 				
-
-
-
-
-
+	<section id="aliados" class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<article class="info-aliados">
+				<h2>Somos Tu Mejor Aliado</h2>
+				<p>Somos un comercializador de repuestos de vehículos para el mercado colombiano con más de 22 años de experiencia. Contamos con cinco puntos deventa en Medellín y uno en Bogotá.Creemos en las personas y es por ello que somos una gran familia que está dispuesta a ofrecerle a los clientes el mejor servicio, con excelente actitud, profesionalismo, un amplio conocimientoen 
+				marcas y repuestos para diferentes vehículos.</p>
+				<div class="button-aliado">
+					<button><a href="#">Productos</a></button>
+					<button><a href="#">Contactanos</a></button>
+				</div>
+			</article>
+		</div>
+		
+		<div class="col-lg-6 carrousel-aliados">
+			<div id="carouselExample" class="carousel slide">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img1.jpeg" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img2.png" class="d-block w-100" alt="...">
+					</div>
+					<div class="carousel-item">
+					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img3.jpg" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
 			</div>
 		</div>
-	</section>
+	</div>
+ </section>
 
 
 	<footer class="footer section text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="social-media">
-						<li>
-							<a href="https://www.facebook.com/themefisher">
-								<i class="tf-ion-social-facebook"></i>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="social-media">
+					<li>
+						<a href="#">
+							<i class="tf-ion-social-facebook"></i>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/themefisher">
+							<a href="#">
 								<i class="tf-ion-social-instagram"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.twitter.com/themefisher">
-								<i class="tf-ion-social-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.pinterest.com/themefisher/">
-								<i class="tf-ion-social-pinterest"></i>
 							</a>
 						</li>
 					</ul>
 					<ul class="footer-menu text-uppercase">
 						<li>
-							<a href="contact.html">CONTACTO</a>
+							<a href="contact.php">CONTACTO</a>
 						</li>
 						<li>
-							<a href="shop.html">REPUESTOS</a>
+							<a href="shop-slidebar.html">REPUESTOS</a>
 						</li>
 						<li>
-							<a href="contact.html">POLITICAS DE PRIVACIDAD</a>
+							<a href="#">POLITICAS DE PRIVACIDAD</a>
 						</li>
 					</ul>
-					<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a
-							href="https://themefisher.com/">Themefisher</a></p>
+					<p class="copyright-text">©MotorsWeb 2023, Developed by <a href="#">MotorsWeb</a></p>
 				</div>
 			</div>
 		</div>
@@ -450,6 +432,7 @@ require_once("controllers/mostrarInfoCliente.php");
 	<script src="views/Cliensite/plugins/jquery/dist/jquery.min.js"></script>
 	<!-- Bootstrap 3.1 -->
 	<script src="views/Cliensite/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	<!-- Bootstrap Touchpin -->
 	<script src="views/Cliensite/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
 	<!-- Instagram Feed Js -->
@@ -470,6 +453,8 @@ require_once("controllers/mostrarInfoCliente.php");
 
 	<!-- Main Js File -->
 	<script src="views/Cliensite/js/script.js"></script>
+
+
 
 
 
