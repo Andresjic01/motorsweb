@@ -42,6 +42,7 @@ require_once("controllers/mostrarInfoCliente.php");
 
 	<!-- Themefisher Icon font -->
 	<link rel="stylesheet" href="views/Cliensite/plugins/themefisher-font/style.css">
+	<script src="https://kit.fontawesome.com/a6c0b2cb0d.js" crossorigin="anonymous"></script>
 	<!-- bootstrap.min css -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" href="views/Cliensite/plugins/bootstrap/css/bootstrap.min.css">
@@ -53,6 +54,7 @@ require_once("controllers/mostrarInfoCliente.php");
 	<link rel="stylesheet" href="views/Cliensite/plugins/slick/slick-theme.css">
 
 	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="views/Cliensite/css/style-index.css">
 	<link rel="stylesheet" href="views/Cliensite/css/style.css">
 
 
@@ -350,45 +352,67 @@ require_once("controllers/mostrarInfoCliente.php");
 
 	<!-- MAIN-lealjh -->
 				
-	<section id="aliados" class="container">
-	<div class="row">
-		<div class="col-lg-6">
-			<article class="info-aliados">
-				<h2>Somos Tu Mejor Aliado</h2>
-				<p>Somos un comercializador de repuestos de vehículos para el mercado colombiano con más de 22 años de experiencia. Contamos con cinco puntos deventa en Medellín y uno en Bogotá.Creemos en las personas y es por ello que somos una gran familia que está dispuesta a ofrecerle a los clientes el mejor servicio, con excelente actitud, profesionalismo, un amplio conocimientoen 
-				marcas y repuestos para diferentes vehículos.</p>
-				<div class="button-aliado">
-					<button><a href="#">Productos</a></button>
-					<button><a href="#">Contactanos</a></button>
+<section id="aliados">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 info-aliados">
+				<article>
+					<h2>Somos Tu Mejor Aliado</h2>
+					<p>Somos un comercializador de repuestos de vehículos para el mercado colombiano con más de 22 años de experiencia. Contamos con cinco puntos deventa en Medellín y uno en Bogotá.Creemos en las personas y es por ello que somos una gran familia que está dispuesta a ofrecerle a los clientes el mejor servicio, con excelente actitud, profesionalismo, un amplio conocimientoen 
+					marcas y repuestos para diferentes vehículos.</p>
+					<div class="button-aliado">
+						<button><a href="#">Contactanos</a></button>
+					</div>
+				</article>
+			</div>
+			
+			<div class="col-lg-6 carrousel-aliados">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+						<img src="views/Cliensite/images/carrousels/carrousel-aliados-img1.jpeg" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+						<img src="views/Cliensite/images/carrousels/carrousel-aliados-img2.png" class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+						<img src="views/Cliensite/images/carrousels/carrousel-aliados-img3.jpg" class="d-block w-100" alt="...">
+						</div>
+					</div>
 				</div>
-			</article>
-		</div>
-		
-		<div class="col-lg-6 carrousel-aliados">
-			<div id="carouselExample" class="carousel slide">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img1.jpeg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img2.png" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-					<img src="views/Cliensite/images/carrousels/carrousel-aliados-img3.jpg" class="d-block w-100" alt="...">
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
 			</div>
 		</div>
 	</div>
- </section>
+</section>
+
+
+<section id="importadores">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="views/Cliensite/images/carrousels/Img-mecanico.jpg" alt="">
+			</div>
+			<div class="col-md-6 import-info">
+				<p>SOMOS IMPORTADORES DIRECTOS DE REPUESTOS AUTOMOTRICES ORIGINALES Y HOMOLOGADOS</p>
+				<article class="icons">
+					<div class="icon1">
+						<i class="fa-solid fa-map-location"></i>
+						<p>Envios a Todo el Pais</p>
+					</div>
+					<div class="icon1">
+						<i class="fa-solid fa-medal"></i>
+						<p>Calidad Garantizada</p>
+					</div>
+					<div class="icon1">
+						<i class="fa-solid fa-headset"></i>
+						<p>Soporte Continuo (Chats)</p>
+					</div>
+				</article>
+				<button><a href="#">Conoce Nuestro Portafolio</a></button>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 	<footer class="footer section text-center">

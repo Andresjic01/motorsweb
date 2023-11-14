@@ -1,0 +1,87 @@
+
+#aliados{
+    margin: 100px 0;
+    padding: 5px;
+}
+
+#aliados .info-aliados{
+    left: -50px;
+    position: relative;
+    display: flex;
+}
+
+#aliados .info-aliados article h2{
+    color: black;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 800;
+}
+
+#aliados .info-aliados article p{
+    margin-bottom: 4rem;
+    text-align: justify;
+}
+
+#aliados .info-aliados article button{
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 10px;
+    position: relative;
+    left: 200px;
+}
+
+
+
+#aliados .info-aliados article button{
+    background: #64c920;
+}
+
+#aliados .carrousel-aliados{
+    width: 550px;
+    height: 50vh;
+}
+
+
+#importadores{
+    margin: 100px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#importadores img{
+    position: relative;
+    width: 500px;
+    left: -50px;
+}
+
+#importadores .import-info{
+    position: relative;
+    margin: 40px 0;
+}
+
+#importadores .import-info p{
+    text-align: start;
+    
+}
+
+#importadores .import-info .icons{
+    margin-top: 30px ;
+
+}
+
+#importadores .import-info .icon1{
+    display: flex;
+    align-items: center;
+}
+
+#importadores .import-info .icon1 i{
+    margin-right: 15px;
+}
+
+#importadores .import-info button{
+    margin-top:20px ;
+    background: rgb(207, 162, 14);
+    padding: 1rem;
+    width: 20rem;
+    border-radius: 10px;
+}
