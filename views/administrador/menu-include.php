@@ -4,7 +4,7 @@
                 <div class="logo">
                     <a href="home.php">
                         <!-- <img src="../Dashboard/images/logo.png" alt="" /> -->
-                        <span><img src="../Cliensite/images/logos.png" width="10px" alt=""></span>
+                        <span><img src="../Cliensite/images/logos.png" style="width:150px;" alt=""></span>
                     </a>
                 </div>
                 <ul>
@@ -41,9 +41,9 @@
                             <span class="sidebar-collapse-icon ti-angle-down"></span>
                         </a>
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="registrarProducto.php"> <i class="ti-plus"></i>Registrar</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="verProductos.php"><i class="ti-eye"></i>Ver productos</a>
                             </li>
@@ -55,9 +55,9 @@
                             <span class="sidebar-collapse-icon ti-angle-down"></span>
                         </a>
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <a href="registrarServicios.php"> <i class="ti-plus"></i>Registrar</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="verServicios.php"><i class="ti-eye"></i>Ver servicios</a>
                             </li>

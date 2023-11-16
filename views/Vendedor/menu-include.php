@@ -6,7 +6,7 @@
             <div class="logo">
                 <a href="home.php">
                     <!-- <img src="images/logo.png" alt="" /> -->
-                    <span><img src="../Cliensite/images/logos.png" width="10px" alt=""></span>
+                    <span><img src="../Cliensite/images/logos.png" style="width:150px;" alt=""></span>
                 </a></div>
 
                 <?php
