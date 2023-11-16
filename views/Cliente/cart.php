@@ -111,7 +111,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			<p>Productos</p>
 			<p>Envio</p>
 			<p><strong>Total</strong></p>
-			<button>Continuar compra</button>
+			<button style="width:250px; height:35px; background:black; border-radius:5px; color:white;">Continuar compra</button>
 		</div>
       </div>
     </div>

@@ -19,7 +19,7 @@
 				<ul class="top-menu text-right list-inline">
 					<li class="dropdown cart-nav dropdown-slide">
 						<a href="cart.php" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
-								class="tf-ion-android-cart"></i></a>
+								class="tf-ion-android-cart" style="font-size:50px;"></i></a>
 						<div class="dropdown-menu cart-dropdown">
 							<!-- Cart Item -->
 							<div class="media">
@@ -55,7 +55,7 @@
 					<!-- Search -->
 					<li class="dropdown search dropdown-slide">
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
-								class="tf-ion-ios-search-strong"></i> Buscar</a>
+								class="tf-ion-ios-search-strong" style="font-size:30px;"></i> Buscar</a>
 						<ul class="dropdown-menu search-dropdown">
 							<li>
 								<form action="post"><input type="search" class="form-control" placeholder="Search..."></form>
