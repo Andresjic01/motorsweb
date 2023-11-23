@@ -1,11 +1,26 @@
-
 <!-- Start Top Header Bar -->
 <section class="top-header">
 	<div class="container justify-content-between">
 		<div class="row">
 			<div class="col-md-4  col-xs-12 col-sm-4 text-center">
-				<p>"Potencia tu auto con repuestos de calidad. Encuentra lo que necesitas para seguir en camino."</p>
+				<!-- <p>"Potencia tu auto con repuestos de calidad. Encuentra lo que necesitas para seguir en camino."</p> -->
+				
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active" >
+				<p>La solución a tus necesidades de repuestos, a solo un clic de distancia.</p>
+				</div>
+						<div class="carousel-item" >
+				<p>Miles de repuestos disponibles para garantizar tu seguridad en el camino.</p>
+				</div>
+						<div class="carousel-item" >
+				<p>Descubre la mejor selección de repuestos para tu automóvil en nuestra tienda en línea.</p>
+				</div>
+					</div>
+				</div>
 			</div>
+
+			
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
@@ -18,7 +33,7 @@
 				<!-- Cart -->
 				<ul class="top-menu text-right list-inline">
 					<li class="dropdown cart-nav dropdown-slide">
-						<a href="cart.php" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
 								class="tf-ion-android-cart"></i></a>
 						<div class="dropdown-menu cart-dropdown">
 							<!-- Cart Item -->
@@ -38,15 +53,29 @@
 								<a href="#!" class="remove"><i class="tf-ion-close"></i></a>
 							</div><!-- / Cart Item -->
 							<!-- Cart Item -->
-							
+							<div class="media">
+								<a class="pull-left" href="#!">
+									<img class="media-object" src="..
+									/Cliensite/images/shop/cart/cart-2.jpg" alt="image" />
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
+									<div class="cart-price">
+										<span>1 x</span>
+										<span>1250.00</span>
+									</div>
+									<h5><strong>$1200</strong></h5>
+								</div>
+								<a href="#!" class="remove"><i class="tf-ion-close"></i></a>
+							</div><!-- / Cart Item -->
 
 							<div class="cart-summary">
 								<span>Total</span>
 								<span class="total-price">$1799.00</span>
 							</div>
 							<ul class="text-center cart-buttons">
-								<li><a href="cart.php" class="btn btn-small">Ver carrito</a></li>
-								<li><a href="checkout.html" class="btn btn-small btn-solid-border">Pagar</a></li>
+								<li><a href="views/Cliensite/cart.html" class="btn btn-small">View Cart</a></li>
+								<li><a href="views/Cliensite/checkout.html" class="btn btn-small btn-solid-border">Checkout</a></li>
 							</ul>
 						</div>
 
@@ -93,12 +122,12 @@
 				<ul class="nav navbar-nav">
 
 					<!-- Home -->
-					<li class="hoverred">
+					<li class="">
 						<a href="home.php">Inicio</a>
 					</li>
 					<!-- / Home -->
 
-					<li class="dropdown width:130px dropdown-slide hoverred">
+					<li class="dropdown width:130px dropdown-slide ">
 						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
 							role="button" aria-haspopup="true" aria-expanded="false">Talleres<span
 								class="tf-ion-ios-arrow-down"></span></a>
@@ -110,15 +139,15 @@
 									<ul>
 										<li class="dropdown-header">Servicios</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="Service.php">Servicios</a></li>
-										<li><a href="Talleres.php">Talleres</a></li>
+										<li ><a href="Service.php">Servicios</a></li>
+										<!-- <li><a href="llanteras.php">Llanteras</a></li> -->
 									</ul>
 								</div>
 							</div>
 						</div>
 					</li>
 
-					<li class="dropdown width:130px dropdown-slide hoverred">
+					<li class="dropdown width:130px dropdown-slide ">
 						<a href="shop-sidebar.php" >Repuestos<span ></span></a>
 						
 					</li>
@@ -160,19 +189,21 @@
 						</div>
 					</li> -->
 					
-					<li class="hoverred">
+					<li class="">
 						<a href="about.php">Informacion del sitio</a>
 					</li>
 					<!-- inicio de sesion -->
-					<li class="dropdown dropdown-slide hoverred">
+					<li class="dropdown dropdown-slide ">
+
 						<?php
 							verActividadBoton()
 						?>
+						<!-- <a href="miActividad.php">Mi actividad</a> -->
 							
 					</li><!-- / inisio de sesion -->
 
 					<!-- Registro -->
-					<li class="dropdown width:130px dropdown-slide hoverred">
+					<li class="dropdown width:130px dropdown-slide ">
 						<a href="#!" class="sidebar-sub-toggle"   data-delay="350"
 							role="button" aria-haspopup="true" aria-expanded="false">Perfil
 							<span class="sidebar-collapse-icon ti-angle-down"></span>
