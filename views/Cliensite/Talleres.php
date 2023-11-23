@@ -36,11 +36,13 @@ require_once("../../controllers/mostrarInfoCliente.php");
   
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="plugins/themefisher-font/style.css">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   
+  <!-- icons -->
+  <link href="../Dashboard/css/lib/themify-icons.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
   <!-- Animate css -->
   <link rel="stylesheet" href="plugins/animate/animate.css">
   <!-- Slick Carousel -->
@@ -67,10 +69,10 @@ require_once("../../controllers/mostrarInfoCliente.php");
 		<div class="row">
 			<div class="col-md-12">
 				<div class="content">
-					<h1 class="page-name">Servicios</h1>
+					<h1 class="page-name">Talleres</h1>
 					<ol class="breadcrumb">
 						<li><a href="index.html">inicio</a></li>
-						<li class="active">Servicios</li>
+						<li class="active">Talleres</li>
 					</ol>
 				</div>
 			</div>
@@ -83,35 +85,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 	<div class="container">
 		<div class="row">
 			
-			<!-- <div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" style="height: 400px;" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="fi fi-ss-map-marker"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#!" ><i class="fi fi-ss-info"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="fi fi-brands-whatsapp"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div> -->
+
 			<?php
-				mostrarServiciosIndex()
+				mostrarTalleresClientes();
 			?>
 			
 		

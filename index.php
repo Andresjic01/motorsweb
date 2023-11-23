@@ -187,9 +187,8 @@ require_once("controllers/mostrarInfoCliente.php");
 										<ul>
 											<li class="dropdown-header">Servicios</li>
 											<li role="separator" class="divider"></li>
-											<li><a href="views/Cliensite/Service.php">Mecanica automotriz <br>
-													General</a></li>
-											<li><a href="views/Cliensite/llanteras.php">Llanteras</a></li>
+											<li><a href="views/Cliensite/Service.php">Servicios</a></li>
+											<li><a href="views/Cliensite/Talleres.php">Talleres</a></li>
 										</ul>
 									</div>
 								</div>
@@ -239,7 +238,7 @@ require_once("controllers/mostrarInfoCliente.php");
 					</li> -->
 
 						<li class="hoverred">
-							<a href="views/Cliensite/about.html">Informacion del sitio</a>
+							<a href="views/Cliensite/about.php">Informacion del sitio</a>
 						</li>
 						<!-- inicio de sesion -->
 						<li class="dropdown dropdown-slide hoverred">
@@ -355,92 +354,48 @@ require_once("controllers/mostrarInfoCliente.php");
 				</div>
 			</div>
 			<div class="row">
-			<!-- <div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="images/shop/products/product-1.jpg" alt="product-img" style="max-height:400px;" />
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Reef Boardsport</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div> -->
 
 			<?php
 				mostrarProductosindex()
 			?>
-
-				
-
-
-
-
 
 			</div>
 		</div>
 	</section>
 
 
-	<footer class="footer section text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="social-media">
-						<li>
-							<a href="https://www.facebook.com/themefisher">
-								<i class="tf-ion-social-facebook"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.instagram.com/themefisher">
-								<i class="tf-ion-social-instagram"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.twitter.com/themefisher">
-								<i class="tf-ion-social-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.pinterest.com/themefisher/">
-								<i class="tf-ion-social-pinterest"></i>
-							</a>
-						</li>
-					</ul>
-					<ul class="footer-menu text-uppercase">
-						<li>
-							<a href="contact.html">CONTACTO</a>
-						</li>
-						<li>
-							<a href="shop.html">REPUESTOS</a>
-						</li>
-						<li>
-							<a href="contact.html">POLITICAS DE PRIVACIDAD</a>
-						</li>
-					</ul>
-					<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a
-							href="https://themefisher.com/">Themefisher</a></p>
-				</div>
+<footer class="footer section text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="social-media">
+					<li>
+						<a href="https://www.facebook.com/themefisher">
+							<i class="tf-ion-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/themefisher">
+							<i class="tf-ion-social-instagram"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-menu text-uppercase">
+					<li>
+						<a href="views/Cliente/denunciar.php">¿Tienes alguna queja?</a>
+					</li>
+					<li>
+						<a href="views/Cliensite/shop-sidebar.php">REPUESTOS</a>
+					</li>
+					<li>
+						<a href="#">POLITICAS DE PRIVACIDAD</a>
+					</li>
+				</ul>
+				<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></p>
 			</div>
 		</div>
-	</footer>
+	</div>
+</footer>
 
 	<!-- 
 	Essential Scripts

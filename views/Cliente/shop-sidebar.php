@@ -146,7 +146,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 					<input type="text" placeholder="Buscar" id="buscador" name="busqueda" >
 					<button class="Buscar" type="submit" name="enviar">Buscar</button>
 			</div>
-			<div class="row">
+		<div class="row">
 
 				
 
@@ -162,17 +162,17 @@ require_once("../../controllers/mostrarInfoCliente.php");
 				$consulta = $conexion->query("SELECT * FROM productos WHERE NomProducto LIKE '%$busqueda%'");
 
 
-				while ($resultado = $consulta->fetch()){
+				while ($f = $consulta->fetch()){
 					
 					echo'<div class="col-md-4">
 					<div class="product-item">
 						<div class="product-thumb">
 							<span class="bage">Sale</span>
-							<img class="img-responsive" src="../'.$resultado['Foto1'].'" alt="product-img" style="height: 330px; " />
+							<img class="img-responsive" src="../'.$f['Foto1'].'" alt="product-img" style="height: 330px; " />
 							<div class="preview-meta">
 								<ul>
 									<li>
-										<span  data-toggle="modal" data-target="#'.$resultado['IdProducto'].'">
+										<span  data-toggle="modal" data-target="#'.$f['IdProducto'].'">
 											<i class="tf-ion-ios-search-strong"></i>
 										</span>
 									</li>
@@ -180,14 +180,21 @@ require_once("../../controllers/mostrarInfoCliente.php");
 										<a href="#!" ><i class="tf-ion-ios-heart"></i></a>
 									</li>
 									<li>
-										<a href="#!"><i class="tf-ion-android-cart"></i></a>
+									<form action="" id="miFormulario">
+									<input type="hidden" value="'.$f['IdProducto'].'" name="id" id="id">
+									<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
+									<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
+									<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
+									<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
+									
+								</form>
 									</li>
 								</ul>
 							  </div>
 						</div>
 						<div class="product-content">
-							<h4><a href="product-single.html">'.$resultado['NomProducto'].'</a></h4>
-							<p class="price">$'.$resultado['Precio'].'</p>
+							<h4><a href="product-single.html">'.$f['NomProducto'].'</a></h4>
+							<p class="price">$'.$f['Precio'].'</p>
 						</div>
 					</div>
 				</div>'
@@ -246,7 +253,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			?>
 
 			</form>
-	</div>
+	    </div>
 					<?php
 						modalProductos()
 					?>

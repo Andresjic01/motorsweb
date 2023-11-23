@@ -1,11 +1,3 @@
-
-<?php
-require_once("../../models/conexion.php");
-require_once("../../models/consultas.php");
-require_once("../../models/seguridadCliente.php");
-require_once("../../controllers/mostrarInfoCliente.php");
-?>
-
 <!DOCTYPE html>
 
 <!--
@@ -35,18 +27,18 @@ require_once("../../controllers/mostrarInfoCliente.php");
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
   
   <!-- Themefisher Icon font -->
-  <link rel="stylesheet" href="../Cliensite/plugins/themefisher-font/style.css">
+  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="../Cliensite/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
   
   <!-- Animate css -->
-  <link rel="stylesheet" href="../Cliensite/plugins/animate/animate.css">
+  <link rel="stylesheet" href="plugins/animate/animate.css">
   <!-- Slick Carousel -->
-  <link rel="stylesheet" href="../Cliensite/plugins/slick/slick.css">
-  <link rel="stylesheet" href="../Cliensite/plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../Cliensite/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -110,7 +102,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 		<div class="row">
 			<div class="col-md-2 espacio">
 				<div class="team-member text-center">
-					<img class="img-circle" src="../Cliensite/images/team/fotoDaniel.jpeg" style="height: 150px;">
+					<img class="img-circle" src="images/team/fotoDaniel.jpeg" style="height: 150px;">
 					<h4>Daniel Pérez</h4>
 					<a href="https://lealjh.github.io/Portafolio/" target="_blank">
 					<button style="background:black; border:none; border-radius:10px; color:white;">Ver perfil</button>
@@ -120,7 +112,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-2 espacio" >
 				<div class="team-member text-center">
-					<img class="img-circle" src="../Cliensite/images/team/fotoEsclavo.jpeg" style="height: 150px;">
+					<img class="img-circle" src="images/team/fotoEsclavo.jpeg" style="height: 150px;">
 					<h4>Samuel Sanchez</h4>
 					<a href="facebook.com">
 					<button style="background:black; border:none; border-radius:10px; color:white;">Ver perfil</button>
@@ -130,7 +122,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-2 espacio">
 				<div class="team-member text-center">
-					<img class="img-circle" src="../Cliensite/images/team/fotoMancilla.jpeg" style="height: 150px;">
+					<img class="img-circle" src="images/team/fotoMancilla.jpeg" style="height: 150px;">
 					<h4>Andes Mancilla</h4>
 					<a href="https://andresjic01.github.io/Portfolio/" target="_blank"> 
 					<button style="background:black; border:none; border-radius:10px; color:white;">Ver perfil</button>
@@ -140,7 +132,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-2 espacio">
 				<div class="team-member text-center">
-					<img class="img-circle" src="../Cliensite/images/team/fotoMarica.jpeg" style="height: 150px;">
+					<img class="img-circle" src="images/team/fotoMarica.jpeg" style="height: 150px;">
 					<h4>Alejandro Ardila</h4>
 					<a href="facebook.com">
 					<button style="background:black; border:none; border-radius:10px; color:white;">Ver perfil</button>
@@ -150,7 +142,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-2 espacio">
 				<div class="team-member text-center">
-					<img class="img-circle" src="../Cliensite/images/team/fotoCoste.jpeg" style="height: 150px;">
+					<img class="img-circle" src="images/team/fotoCoste.jpeg" style="height: 150px;">
 					<h4>Juan Rubio</h4>
 					<a href="facebook.com">
 					<button style="background:black; border:none; border-radius:10px; color:white;">Ver perfil</button>
@@ -195,10 +187,10 @@ require_once("../../controllers/mostrarInfoCliente.php");
 				</ul>
 				<ul class="footer-menu text-uppercase">
 					<li>
-						<a href="denunciar.php">¿Tienes alguna queja?</a>
+						<a href="../Cliente/denunciar.php">¿Tienes alguna queja?</a>
 					</li>
 					<li>
-						<a href="shop-slidebar.html">REPUESTOS</a>
+						<a href="views/Cliensite/shop-sidebar.php">REPUESTOS</a>
 					</li>
 					<li>
 						<a href="#">POLITICAS DE PRIVACIDAD</a>
@@ -215,28 +207,28 @@ require_once("../../controllers/mostrarInfoCliente.php");
     =====================================-->
     
     <!-- Main jQuery -->
-    <script src="../Cliensite/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.1 -->
-    <script src="../Cliensite/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Bootstrap Touchpin -->
-    <script src="../Cliensite/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <!-- Instagram Feed Js -->
-    <script src="../Cliensite/plugins/instafeed/instafeed.min.js"></script>
+    <script src="plugins/instafeed/instafeed.min.js"></script>
     <!-- Video Lightbox Plugin -->
-    <script src="../Cliensite/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
     <!-- Count Down Js -->
-    <script src="../Cliensite/plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+    <script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
 
     <!-- slick Carousel -->
-    <script src="../Cliensite/plugins/slick/slick.min.js"></script>
-    <script src="../Cliensite/plugins/slick/slick-animation.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
 
     <!-- Google Mapl -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-    <script type="text/javascript" src="../Cliensite/plugins/google-map/gmap.js"></script>
+    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 
     <!-- Main Js File -->
-    <script src="../Cliensite/js/script.js"></script>
+    <script src="js/script.js"></script>
     
 
 
