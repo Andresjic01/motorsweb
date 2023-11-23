@@ -182,8 +182,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 									<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
 									<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
 									<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
-									<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
-									
+									<a href="../../controllers/agregarCarrito.php?id_producto=' . $f['IdProducto'] . '">
+									<i class="tf-ion-android-cart"></i>
+									</a>
 								</form>
 									</li>
 								</ul>
@@ -228,7 +229,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 										<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
 										<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
 										<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
-										<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
+										<li>
+										<a href="../../controllers/agregarCarrito.php?id_producto=' . $f['IdProducto'] . '"><i class="tf-ion-android-cart"></i></a>
+										</li>
 										
 									</form>
 										

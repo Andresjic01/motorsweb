@@ -1,4 +1,10 @@
-
+<?php
+require_once("../../models/conexion.php");
+require_once("../../models/consultas.php");
+require_once("../../models/seguridadCliente.php");
+require_once("../../controllers/mostrarInfoCliente.php");
+require_once("../../controllers/mostrarCarritoIcono.php");
+?>
 <!-- Start Top Header Bar -->
 <section class="top-header">
 	<div class="container justify-content-between">
@@ -22,23 +28,15 @@
 								class="tf-ion-android-cart" style="font-size:50px;"></i></a>
 						<div class="dropdown-menu cart-dropdown">
 							<!-- Cart Item -->
-							<div class="media">
-								<a class="pull-left" href="#!">
-									<img class="media-object" src="..
-									/Cliensite/images/shop/cart/cart-1.jpg" alt="image" />
-								</a>
-								<div class="media-body">
-									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
-									<div class="cart-price">
-										<span>1 x</span>
-										<span>1250.00</span>
-									</div>
-									<h5><strong>$1200</strong></h5>
-								</div>
-								<a href="#!" class="remove"><i class="tf-ion-close"></i></a>
-							</div><!-- / Cart Item -->
-							<!-- Cart Item -->
 							
+							<!-- Cart Item -->
+							<?php
+
+
+cargarProductoCarritoIcono()
+
+
+?>
 
 							<div class="cart-summary">
 								<span>Total</span>

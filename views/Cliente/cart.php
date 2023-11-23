@@ -3,6 +3,7 @@ require_once("../../models/conexion.php");
 require_once("../../models/consultas.php");
 require_once("../../models/seguridadCliente.php");
 require_once("../../controllers/mostrarInfoCliente.php");
+require_once("../../controllers/mostrarCarrito.php");
 ?>
 
 <!DOCTYPE html>
@@ -72,51 +73,14 @@ require_once("../../controllers/mostrarInfoCliente.php");
 </section>
 
 
+<?php
 
-<div class="page-wrapper">
-  <div class="cart shopping">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 ">
-          <div class="block">
-            <div class="product-list">
-				<h2 style="margin-bottom:19px ;">Productos</h2>
-				
-              <form method="POST">
-                <table class="table">
-                  <tbody>
-                    <tr class="">
-                      <td class="">
-                        <div class="product-info">
-                          <img width="80" src="../Cliensite/images/shop/cart/cart-1.jpg" alt="" />
-                          <a href="#!">Sunglass</a>
-                        </div>
-                      </td>
-                      <td class="">$200.00</td>
-                      <td class="">
-                        <a class="product-remove" href="#!">Eliminar</a>
-                      </td>
-                    </tr>
-					
-                  </tbody>
-                </table>
-              </form>
-            </div>
-          </div>
-        </div>
 
-		<div class="col-md-4">
-			<h2>Resumen de compra</h2>
-			<hr>
-			<p>Productos</p>
-			<p>Envio</p>
-			<p><strong>Total</strong></p>
-			<button style="width:250px; height:35px; background:black; border-radius:5px; color:white;">Continuar compra</button>
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
+cargarProductoCarrito()
+
+
+?>
+
 
 
 <footer class="footer section text-center">

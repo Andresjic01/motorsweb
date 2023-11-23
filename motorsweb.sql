@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-10-2023 a las 11:01:26
--- Versión del servidor: 10.4.17-MariaDB
--- Versión de PHP: 8.0.2
+-- Tiempo de generación: 23-11-2023 a las 19:44:24
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `carrito`
+--
+
+CREATE TABLE `carrito` (
+  `id` bigint(200) NOT NULL,
+  `id_producto` bigint(200) NOT NULL,
+  `id_usuario` bigint(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`id`, `id_producto`, `id_usuario`) VALUES
+(57, 12, 1021),
+(58, 1222, 1021);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `citas`
 --
 
@@ -35,7 +55,7 @@ CREATE TABLE `citas` (
   `Hora` time NOT NULL,
   `Servicio` varchar(50) NOT NULL,
   `EstadoCita` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `citas`
@@ -58,7 +78,7 @@ CREATE TABLE `comentarios` (
   `IdCliente` varchar(50) NOT NULL,
   `Comentario` varchar(200) NOT NULL,
   `Fecha` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -73,7 +93,7 @@ CREATE TABLE `factura` (
   `Cantidad` int(30) NOT NULL,
   `PrecioUnitario` int(30) NOT NULL,
   `Total_Factura` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -94,7 +114,7 @@ CREATE TABLE `productos` (
   `Foto4` varchar(200) NOT NULL,
   `InfoVendedor` varchar(50) NOT NULL,
   `Descripcion` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `productos`
@@ -118,7 +138,7 @@ CREATE TABLE `quejas` (
   `Fecha` datetime DEFAULT current_timestamp(),
   `Nombre` varchar(200) NOT NULL,
   `Asunto` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -133,7 +153,7 @@ CREATE TABLE `servicios` (
   `Proveedor` varchar(30) NOT NULL,
   `Descripcion` varchar(200) NOT NULL,
   `Foto1` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `servicios`
@@ -163,7 +183,7 @@ CREATE TABLE `usuarios` (
   `Estado` varchar(15) NOT NULL,
   `Foto` varchar(200) NOT NULL,
   `Descripcion` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -173,7 +193,8 @@ INSERT INTO `usuarios` (`Identificacion`, `TipoDocumento`, `Nombres`, `Apellidos
 ('1004510351', 'Cc', 'Favian', 'Mancilla', 'favian@misena.edu.co', '', '3115662350', '202cb962ac59075b964b07152d234b70', 'Cliente', 'Activo', '../Uploads/Usuarios/perfil1.jpg', ''),
 ('1004510352', 'Cc', 'Melani ', 'Mancilla', 'Melani@gmail.com', '', '3115662340', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', '', ''),
 ('1004510353', 'Cc', 'Andres', 'Angulo', 'Andres@gmail.com', '', '3115662360', '202cb962ac59075b964b07152d234b70', 'Vendedor', 'Activo', '', ''),
-('1004510354', 'Cc', 'Alexis', 'Mancilla', 'fabianmancilla0708@gmail.com', '', '3115662359', '202cb962ac59075b964b07152d234b70', 'Administrador', 'Activo', '', '');
+('1004510354', 'Cc', 'Alexis', 'Mancilla', 'fabianmancilla0708@gmail.com', '', '3115662359', '202cb962ac59075b964b07152d234b70', 'Administrador', 'Activo', '', ''),
+('1021', 'Cc', 'anderson', 'tovar', 'andercmdsena@gmail.com', '', '123', '202cb962ac59075b964b07152d234b70', 'Cliente', 'Activo', '', '');
 
 -- --------------------------------------------------------
 
@@ -189,11 +210,17 @@ CREATE TABLE `ventas` (
   `Producto` varchar(200) NOT NULL,
   `Unidades` int(50) NOT NULL,
   `Precio unitario` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `citas`
@@ -255,6 +282,12 @@ ALTER TABLE `ventas`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  MODIFY `id` bigint(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+
+--
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
@@ -276,7 +309,7 @@ ALTER TABLE `factura`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `IdProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1223;
+  MODIFY `IdProducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2322;
 
 --
 -- AUTO_INCREMENT de la tabla `quejas`

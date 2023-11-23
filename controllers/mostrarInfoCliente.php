@@ -677,7 +677,7 @@ function mostrarProductosindex(){
 			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
 								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+									<a href="controllers/agregarCarrito.php?id_producto=' . $f['IdProducto'] . '"><i class="tf-ion-android-cart"></i></a>
 								</li>
 							</ul>
                       	</div>
@@ -716,7 +716,9 @@ function mostrarProductosHome(){
 			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
 								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+                                <a href="../../controllers/agregarCarrito.php?id_producto=' . $f['IdProducto'] . '">
+                                <i class="tf-ion-android-cart"></i>
+                                </a>
 								</li>
 							</ul>
                       	</div>
