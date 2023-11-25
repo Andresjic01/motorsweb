@@ -28,13 +28,17 @@
     border-radius: 10px;
     position: relative;
     left: 200px;
-}
-
-
-
-#aliados .info-aliados article button{
     background: #64c920;
+    transition: .3s ;
 }
+
+#aliados .info-aliados article button:hover{
+    background: #5f5b5b;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+
 
 #aliados .carrousel-aliados{
     width: 550px;
@@ -84,4 +88,11 @@
     padding: 1rem;
     width: 20rem;
     border-radius: 10px;
+    transition: .3s;
+}
+
+#importadores .import-info button:hover{
+    background: #5f5b5b;
+    transform: scale(1.1);
+    color: #fff;
 }

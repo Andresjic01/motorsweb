@@ -48,6 +48,7 @@ require_once("controllers/mostrarInfoCliente.php");
 	<link rel="stylesheet" href="views/Cliensite/plugins/bootstrap/css/bootstrap.min.css">
 
 	<!-- Animate css -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="views/Cliensite/plugins/animate/animate.css">
 	<!-- Slick Carousel -->
 	<link rel="stylesheet" href="views/Cliensite/plugins/slick/slick.css">
@@ -353,7 +354,7 @@ require_once("controllers/mostrarInfoCliente.php");
 	<!-- MAIN-lealjh -->
 				
 <section id="aliados">
-	<div class="container">
+	<div class="container" data-aos="zoom-out-up" data-aos-duration="2000">
 		<div class="row">
 			<div class="col-lg-6 info-aliados">
 				<article>
@@ -361,12 +362,12 @@ require_once("controllers/mostrarInfoCliente.php");
 					<p>Somos un comercializador de repuestos de vehículos para el mercado colombiano con más de 22 años de experiencia. Contamos con cinco puntos deventa en Medellín y uno en Bogotá.Creemos en las personas y es por ello que somos una gran familia que está dispuesta a ofrecerle a los clientes el mejor servicio, con excelente actitud, profesionalismo, un amplio conocimientoen 
 					marcas y repuestos para diferentes vehículos.</p>
 					<div class="button-aliado">
-						<button><a href="#">Contactanos</a></button>
+						<a href="#"><button>Contactanos</button></a>
 					</div>
 				</article>
 			</div>
 			
-			<div class="col-lg-6 carrousel-aliados">
+			<div class="col-lg-6 carrousel-aliados" data-aos="zoom-in-down" data-aos-duration="2000">
 				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
@@ -389,10 +390,10 @@ require_once("controllers/mostrarInfoCliente.php");
 <section id="importadores">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6" data-aos="fade-up-right" data-aos-duration="2000">
 				<img src="views/Cliensite/images/carrousels/Img-mecanico.jpg" alt="">
 			</div>
-			<div class="col-md-6 import-info">
+			<div class="col-md-6 import-info" data-aos="fade-up-left" data-aos-duration="2000">
 				<p>SOMOS IMPORTADORES DIRECTOS DE REPUESTOS AUTOMOTRICES ORIGINALES Y HOMOLOGADOS</p>
 				<article class="icons">
 					<div class="icon1">
@@ -408,7 +409,7 @@ require_once("controllers/mostrarInfoCliente.php");
 						<p>Soporte Continuo (Chats)</p>
 					</div>
 				</article>
-				<button><a href="#">Conoce Nuestro Portafolio</a></button>
+				<a href="#"><button>Conoce Nuestro Portafolio</button></a>
 			</div>
 		</div>
 	</div>
@@ -465,6 +466,12 @@ require_once("controllers/mostrarInfoCliente.php");
 	<script src="views/Cliensite/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
 	<!-- Count Down Js -->
 	<script src="views/Cliensite/plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+	<!-- Aos -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  		AOS.init();
+	</script>
 
 	<!-- slick Carousel -->
 	<script src="views/Cliensite/plugins/slick/slick.min.js"></script>
