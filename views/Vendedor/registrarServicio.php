@@ -68,7 +68,6 @@ require_once("../../controllers/mostrarInfoVendedor.php");
     <link href='../Dashboard/css/lib/helper.css' rel='stylesheet'>
     <link href='../Dashboard/css/style.css' rel='stylesheet'>
     <link href='../Cliensite/css/styleDashboard.css' rel='stylesheet'>
-    <link href='../Cliensite/css/styleLogin.css' rel='stylesheet'>
 
 </head>
 
@@ -86,9 +85,9 @@ include( 'menu-include.php' );
                         <div class='page-header'>
                             <div class='page-title'>
                                 <h1>
-                                    Registar Nuevos productos
+                                    Registar nuevos servicios
                                 </h1>
-                                <p>Por favor completa los campos para añadir un producto</p>
+                                <p>Por favor completa los campos para añadir un servicio</p>
                             </div>
                         </div>
                     </div>

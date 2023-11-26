@@ -92,6 +92,9 @@
                     </li>
                 </ul>
             </li>
+                    <li>
+                        <a href="Ventas.php"> <i class="ti-eye"></i>Reporte de ventas</a>
+                    </li>
             <li>
                 <a href="ver-usuarios.php"><i class="ti-comments"></i>Quejas y reclamos</a>
             </li>

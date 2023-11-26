@@ -16,8 +16,16 @@
         $result = $objValidar -> iniciarSesion($identificacion,$clave);
 
     }else{
-        echo ' <script>alert("ingrese su identificacion y contraseña")</script> ';
-        echo " <script>location.href='../views/Cliensite/login.html'</script>";
+
+        echo '<script> 
+            swal.fire({
+                icon: "error",
+                title: "ingrese su identificacion y contraseña",
+                confirmButtonText: "OK"
+            }).then(function() {
+                window.location = "../views/Cliensite/login.html";
+            });</script>';
+        
     }
 
 ?>

@@ -48,10 +48,32 @@ include ("../../controllers/infoCarrito.php");
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="../Cliensite/css/style.css">
 
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<style>
+    
+    /* Media query for mobile viewport */
+    @media screen and (max-width: 400px) {
+        #paypal-button-container {
+            width: 100%;
+        }
+    }
+    
+    /* Media query for desktop viewport */
+    @media screen and (min-width: 400px) {
+        #paypal-button-container {
+            width: 250px;
+            display: inline-block;
+        }
+    }
+    
+</style>
+
 </head>
 
 <body id="body">
 <!-- Start Top Header Bar -->
+
+
 
 <?php
 	include("include-pag.php")
@@ -73,26 +95,26 @@ include ("../../controllers/infoCarrito.php");
 </section>
 <div class="page-wrapper">
    <div class="checkout shopping">
-   <?php if(!empty($_SESSION['carrito'])){ ?>
-
       <div class="container">
          <div class="row">
-            <div class="col-md-8">
-            
-               <div class="block billing-details">
-                  <h4 class="widget-title">Detales de envio</h4>
-                  <form action="../../controllers/Pagos.php" class="checkout-form" method="POST">
-                     <?php Pagos()?>
-                     <button class="btn btn-main mt-20" name="btnAccion" type="submit" >Pagar</button>
-                  </form>
-               </div>
+            <div class="col-md-8" style="background: #80808094; border-radius:10px; text-align:center;">
+            <?php $total=0;?>
+            <?php foreach($_SESSION['carrito'] as $indice=>$f){?>
+               <?php $total=$total+($f['precio']*$f['cantidad']);?>
+               <?php } ?>
+               <h3>Completar el pago</h3>
+               <hr>
+               <p>Estas a punto de realizar un pago por:</p>
+               <h2>$<?php echo $total?></h2>
+               <div id="paypal-button-container"></div>
+               
+
             </div>
             <div class="col-md-4">
                <div class="product-checkout-details">
                   <div class="block">
                      <h4 class="widget-title">Resumen de compra</h4>
                      <?php $total=0;?>
-                     
                      <?php foreach($_SESSION['carrito'] as $indice=>$f){?>
                      <div class="media product-card">
                         <a class="pull-left" href="product-single.html">
@@ -119,36 +141,13 @@ include ("../../controllers/infoCarrito.php");
                         <span>Total</span>
                         <span>$ <?php echo $total?></span>
                      </div>
-                     
                   </div>
                </div>
             </div>
          </div>
-         
       </div>
-      <?php }  else{ ?>
-                        <div style="text-align:center;" >
-                           <h1>No has comprado nada para pagar</h1>
-                           <p>Compra ahora!</p>
-                        </div>
-                     <?php } ?>
    </div>
 </div>
-   <!-- Modal -->
-   <div class="modal fade" id="coupon-modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-         <div class="modal-content">
-            <div class="modal-body">
-               <form>
-                  <div class="form-group">
-                     <input class="form-control" type="text" placeholder="Enter Coupon Code">
-                  </div>
-                  <button type="submit" class="btn btn-main">Apply Coupon</button>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
    
 <footer class="footer section text-center">
 	<div class="container">
@@ -195,6 +194,56 @@ include ("../../controllers/infoCarrito.php");
 		</div>
 	</div>
 </footer>
+
+
+ 
+ 
+<script>
+    paypal.Button.render({
+        env: 'sandbox', // sandbox | production
+        style: {
+            label: 'checkout',  // checkout | credit | pay | buynow | generic
+            size:  'responsive', // small | medium | large | responsive
+            shape: 'pill',   // pill | rect
+            color: 'gold'   // gold | blue | silver | black
+        },
+ 
+        // PayPal Client IDs - replace with your own
+        // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+ 
+        client: {
+            sandbox:    '',
+            production: ''
+        },
+ 
+        // Wait for the PayPal button to be clicked
+ 
+        payment: function(data, actions) {
+            return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '0.01', currency: 'MXN' }, 
+                            description:"Compra de productos a Develoteca:$0.01",
+                            custom:"Codigo"
+                        }
+                    ]
+                }
+            });
+        },
+ 
+        // Wait for the payment to be authorized by the customer
+ 
+        onAuthorize: function(data, actions) {
+            return actions.payment.execute().then(function() {
+                console.log(data);
+                window.location="verificador.php?paymentToken="+data.paymentToken+"&paymentID="+data.paymentID;
+            });
+        }
+    
+    }, '#paypal-button-container');
+ 
+</script>
     <!-- 
     Essential Scripts
     =====================================-->

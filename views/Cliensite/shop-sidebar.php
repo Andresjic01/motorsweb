@@ -142,6 +142,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 					<form action="" method="GET">
 					<input type="text" placeholder="Buscar" id="buscador" name="busqueda" >
 					<button class="Buscar" type="submit" name="enviar">Buscar</button>
+					</form>
 			</div>
 		<div class="row">
 
@@ -177,14 +178,13 @@ require_once("../../controllers/mostrarInfoCliente.php");
 										<a href="#!" ><i class="tf-ion-ios-heart"></i></a>
 									</li>
 									<li>
-									<form action="" id="miFormulario">
-									<input type="hidden" value="'.$f['IdProducto'].'" name="id" id="id">
-									<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
-									<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
-									<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
-									<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
-									
-								</form>
+									<form action="../../controllers/Iniciarsession.php"  method="POST">
+										<input type="hidden" value="'.$f['IdProducto'].'" name="id" id="id">
+										<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
+										<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
+										<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
+										<button id="agregar" type="submit" name="btnAccion" value="agregar"> <i class="tf-ion-android-cart"></i> </button>
+									</form>
 									</li>
 								</ul>
 							  </div>
@@ -220,15 +220,17 @@ require_once("../../controllers/mostrarInfoCliente.php");
 										</span>
 									</li>
 									<li>
-										<a href="#!" ><i class="tf-ion-ios-heart"></i></a>
+									<form action="../../controllers/Iniciarsession.php"  method="POST">
+									<button id="agregar" type="submit" name="megusta"> <i class="tf-ion-ios-heart"></i> </button>
+									</form>
 									</li>
 									<li>
-									<form action="" id="miFormulario">
+									<form action="../../controllers/Iniciarsession.php"  method="POST">
 										<input type="hidden" value="'.$f['IdProducto'].'" name="id" id="id">
 										<input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
 										<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
 										<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
-										<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
+										<button id="agregar" type="submit" name="carrito"> <i class="tf-ion-android-cart"></i> </button>
 										
 									</form>
 										

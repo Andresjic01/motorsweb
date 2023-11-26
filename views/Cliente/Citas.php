@@ -71,7 +71,7 @@ require_once("../../controllers/mostrarInfoCliente.php");
 <main>
   <section>
     <div class="container">
-    <h2 id="texto">Hola estas son las denuncias o sugerencias que has dado</h2>
+    <h2 id="texto">Hola estas son Todas tus citas</h2>
     <div class="row">
       <div class="col-md-12">
         <table id="bootstrap-data-table-export" class="table table-hover ">

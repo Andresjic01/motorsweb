@@ -1,8 +1,8 @@
 <?php
-require_once("../../models/conexion.php");
-require_once("../../models/consultas.php");
-require_once("../../models/seguridadVendedor.php");
-require_once("../../controllers/mostrarInfoVendedor.php");
+    require_once("../../models/conexion.php");
+    require_once("../../models/consultas.php");
+    require_once("../../models/seguridadVendedor.php");
+    require_once("../../controllers/mostrarInfoVendedor.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ require_once("../../controllers/mostrarInfoVendedor.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MotorWeb</title>
+    <title>Reportes de Ventas Motorsweb</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -48,6 +48,7 @@ require_once("../../controllers/mostrarInfoVendedor.php");
     <link href="../Dashboard/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
     <!-- Weather Icon -->
     <link href="../Dashboard/css/lib/weather-icons.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <!-- Owl Carousel -->
     <link href="../Dashboard/css/lib/owl.carousel.min.css" rel="stylesheet" />
     <link href="../Dashboard/css/lib/owl.theme.default.min.css" rel="stylesheet" />
@@ -57,9 +58,6 @@ require_once("../../controllers/mostrarInfoVendedor.php");
     <link href="../Dashboard/css/lib/chartist/chartist.min.css" rel="stylesheet">
     <!-- Calender -->
     <link href="../Dashboard/css/lib/calendar/fullcalendar.css" rel="stylesheet" />
-
-    <!-- iconos -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
     <!-- Common -->
     <link href="../Dashboard/css/lib/font-awesome.min.css" rel="stylesheet">
@@ -73,9 +71,10 @@ require_once("../../controllers/mostrarInfoVendedor.php");
 
 <body>
 
+   
 
 
-<?php
+    <?php
         include("menu-include.php");
     ?>
 
@@ -89,7 +88,7 @@ require_once("../../controllers/mostrarInfoVendedor.php");
                         <div class="page-header">
                             <div class="page-title">
                                 <h1>
-                                    Productos registrados
+                                    Usuarios registrados
                                 </h1>
                                 <p>Elige la accion que desea realizar "editar" o "eliminar"</p>
                             </div>
@@ -101,9 +100,9 @@ require_once("../../controllers/mostrarInfoVendedor.php");
                             <div class="page-title">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="#">inicio</a>
+                                        <a href="#">Home</a>
                                     </li>
-                                    <li class="breadcrumb-item active">ver productos</li>
+                                    <li class="breadcrumb-item active">Reportes Ventas</li>
                                 </ol>
                             </div>
                         </div>
@@ -118,25 +117,20 @@ require_once("../../controllers/mostrarInfoVendedor.php");
                                 <div class="card-body">
                                     
                                 <div class="table-responsive">
-                                        <table class="table table-hover ">
+                                        <table id="bootstrap-data-table-export" class="table table-hover ">
                                             <thead>
                                                 <tr>
-                                                    <th>idProducto</th>
-                                                    <th>Nombre producto</th>
-                                                    <th>proveedor</th>
-                                                    <th>categoria</th>
-                                                    <th>En inventario</th>
-                                                    <th>Vendidos</th>
-                                                    <th>precio</th>
-                                                    <th>Editar</th>
-                                                    <th>Eliminar</th>
+                                                    <th>#Venta</th>
+                                                    <th>Producto</th>
+                                                    <th>Comprador</th>
+                                                    <th>Fecha</th>
+                                                    <th>Total</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                   cargarProductosVendedor() 
+                                                    cargarVentasReportes();
                                                 ?>
-                                                
                                             </tbody>
                                         </table>
                                     </div>

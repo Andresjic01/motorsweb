@@ -63,7 +63,7 @@ function verActividadNav()
     <a class="nav-link active" aria-current="page" href="Denuncias.php?id=' . $f['Identificacion'] . '">Denuncias y quejas</a>
     <a class="nav-link" href="Historial.php?id=' . $f['Identificacion'] . '">Historial de compras</a>
     <a class="nav-link" href="Citas.php?id=' . $f['Identificacion'] . '">Citas</a>
-    <a class="nav-link" href="Historial.php?id=' . $f['Identificacion'] . '">Historial de compras</a>
+    <a class="nav-link" href="Historial.php?id=' . $f['Identificacion'] . '">Productos favoritos</a>
     <a class="nav-link" href="#">Pricing</a>
   </div> 
 
@@ -266,7 +266,7 @@ function mostrarCitas(){
     
 
         if (!isset($result)) {
-            echo '<h2>Hasta este momento no has solitado ninguna queja</h2>';
+            echo '<h2>Hasta este momento no has solitado ninguna Cita</h2>';
         } else {
             foreach ($result as $f) {
 
@@ -446,16 +446,16 @@ function modal(){
 
 							<div class="row">
 
-							<div class="col-md-7" style="border: 2px solid black; border-radius:20px;">
+							<div class="col-md-6" style="border: 2px solid black; border-radius:20px; padding:0;">
 								<div class="modal-image">
-                                    <img class="img-responsive" src="../'.$f['Foto1'].'" alt="" style="height:450px;">
+                                    <img  src="../'.$f['Foto1'].'" alt="" style="height:300px; border-radius:20px;">
                                 </div>
             
 							</div>
 
-							<div class="col-md-5" >
+							<div class="col-md-6" >
 								<h2 class="product-title">'.$f['NomServicio'].'</h2>
-								<p class="product-short-description">'.$f['Descripcion'].'</p>
+								<p style="color:Black;">'.$f['Descripcion'].'</p>
 							</div>
 
 							</div>
@@ -826,16 +826,16 @@ function modalInfoTaller(){
 
 							<div class="row">
 
-							<div class="col-md-7" style="border: 2px solid black; border-radius:20px;">
+							<div class="col-md-6" style="border: 2px solid black; border-radius:20px; padding:0;">
 								<div class="modal-image">
-                                    <img class="img-responsive" src="../'.$f['Foto'].'" alt="" style="height:450px;">
+                                    <img  src="../'.$f['Foto'].'" alt="" style="height:300px; border-radius:20px;">
                                 </div>
             
 							</div>
 
-							<div class="col-md-5" >
+							<div class="col-md-6" >
 								<h2 class="product-title">'.$f['Nombres'].'</h2>
-								<p class="product-short-description">'.$f['Descripcion'].'</p>
+								<p class="product-short-description">'.$f['DescripcionTaller'].'</p>
 							</div>
 
 							</div>
@@ -1151,4 +1151,69 @@ function formDenuncias(){
 
 }
 
+
+function Pagos()
+{
+  //variable de sesion para el login
+  // si ya se inicio en el anterior archivo no debe existir en este
+  // session_start();
+  $id = $_SESSION['id'];
+
+  $objConsultas = new consultas();
+  $result = $objConsultas->verPerfil($id);
+
+  foreach ($result as $f) {
+    echo '
+    <div class="form-group">
+                        <label for="full_name">Nombre completo</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="" value="'.$f['Nombres'].''." ".''.$f['Apellidos'].'">
+                     </div>
+                     <div class="form-group">
+                        <label for="user_address">Direccion</label>
+                        <input type="text" class="form-control" name="direccion" placeholder="">
+                     </div>
+                     <div class="checkout-country-code clearfix">
+                        <div class="form-group">
+                           <label for="user_post_code">Ciudad</label>
+                           <input type="text" class="form-control" name="ciudad" name="zipcode" value="">
+                        </div>
+                        <div class="form-group" >
+                           <label for="user_city">Barrio</label>
+                           <input type="text" class="form-control" name="barrio" name="city" value="">
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="user_country">Numero de contacto</label>
+                        <input type="text" class="form-control" name="telefono" placeholder="" value="'.$f['Telefono'].'">
+                     </div>
+                     <input type="hidden" class="form-control" name="comprador" placeholder="" value="'.$f['Identificacion'].'">                     
+
+      ';
+  }
+
+}
+
+function historialCompras()
+{
+  //variable de sesion para el login
+  // si ya se inicio en el anterior archivo no debe existir en este
+  // session_start();
+  $id = $_SESSION['id'];
+
+  $objConsultas = new consultas();
+  $result = $objConsultas->mostrarHistorial($id);
+
+  foreach ($result as $f) {
+    echo '
+    <tr>
+      <th scope="row">'.$f['NomProducto'].'</th>
+      <td>'.$f['Unidades'].'</td>
+      <td>'.$f['PrecioUnitario'].'</td>
+      <td>'.$f['Nombres'].''." ".''.$f['Apellidos'].'</td>
+      <td>'.$f['Fecha'].'</td>
+    </tr>
+      ';
+  }
+
+}
 ?>

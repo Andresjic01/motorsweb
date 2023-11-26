@@ -44,8 +44,16 @@
 
         }
         else{
-            echo '<script> alert("Por favor complete todos los campos") </script>';
-            echo "<script>location.href='../views/Vendedor/registrarProducto.php'</script>";
+
+            echo '<script> 
+            swal.fire({
+                icon: "error",
+                title: "Por favor complete todos los campos",
+                confirmButtonText: "OK"
+            }).then(function() {
+                window.location = "../views/Vendedor/registrarProducto.php";
+            });</script>';
+
         }
 
 

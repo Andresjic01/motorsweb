@@ -3,6 +3,8 @@ require_once("../../models/conexion.php");
 require_once("../../models/consultas.php");
 require_once("../../models/seguridadCliente.php");
 require_once("../../controllers/mostrarInfoCliente.php");
+include ("../../controllers/infoCarrito.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -76,44 +78,67 @@ require_once("../../controllers/mostrarInfoCliente.php");
 <div class="page-wrapper">
   <div class="cart shopping">
     <div class="container">
+
+        <?php if(!empty($_SESSION['carrito'])){ ?>
+
       <div class="row">
         <div class="col-md-8 ">
           <div class="block">
             <div class="product-list">
-				<h2 style="margin-bottom:19px ;">Productos</h2>
+				      <h2 style="margin-bottom:19px ;">Productos</h2>
 				
               <form method="POST">
+                <?php $total=0;?>
+                <?php foreach($_SESSION['carrito'] as $indice=>$f){?>
                 <table class="table">
                   <tbody>
                     <tr class="">
                       <td class="">
                         <div class="product-info">
-                          <img width="80" src="../Cliensite/images/shop/cart/cart-1.jpg" alt="" />
-                          <a href="#!">Sunglass</a>
+                          <img width="90" height="100" src="../<?php echo $f['foto']?>" alt="" />
+                          <a href="#!"><?php echo $f['nombre']?></a>
                         </div>
                       </td>
-                      <td class="">$200.00</td>
+                      <td class=""><?php echo $f['precio']?></td>
                       <td class="">
-                        <a class="product-remove" href="#!">Eliminar</a>
+
+                        <form action="" method="POST">
+                          <input type="hidden" name="ide" value="<?php echo $f['Id']?>">
+                        <button style="background:none; border:none;"
+                        type="submit"
+                        name="btnAccion"
+                        value="Eliminar" >Eliminar</button>
+                        </form>
+
                       </td>
                     </tr>
-					
                   </tbody>
                 </table>
+                <?php $total=$total+($f['precio']*$f['cantidad']);?>
+                  <?php } ?>
               </form>
             </div>
           </div>
         </div>
 
-		<div class="col-md-4">
-			<h2>Resumen de compra</h2>
-			<hr>
-			<p>Productos</p>
-			<p>Envio</p>
-			<p><strong>Total</strong></p>
-			<button style="width:250px; height:35px; background:black; border-radius:5px; color:white;">Continuar compra</button>
-		</div>
+        <div class="col-md-4">
+          <h2>Resumen de compra</h2>
+          <hr>
+          <p style="text-align:;">Productos <span style="margin-left:90px;"><?php echo number_format($total,2)?></span></p>
+          <p>Envio <span style="margin-left:130px;">Gratis</span></p>
+          <p><strong>Total</strong><span style="margin-left:130px;"><?php echo number_format($total,2)?></span></p>
+          <a href="checkout.php"><button style="width:250px; height:35px; background:black; border-radius:5px; color:white;">Continuar compra</button></a>
+        </div>
       </div>
+
+      <div></div>
+
+          <?php }else {?>
+            <div style="text-align:center;">
+              <h2>No hay productos en el carrito</h2>
+              <p>Empieza a comprar ¡ahora!</p>
+            </div>
+          <?php }?>
     </div>
   </div>
 </div>

@@ -13,9 +13,14 @@ if(strlen($comentario)>0){
     $objconsultas = new Consultas();
     $result = $objconsultas->enviarComentarioCli($comentario,$producto, $cliente, $fecha);
 }else{
-    echo '<script> alert("No puedes enviar un comentario vacio") </script>';
-    echo '<script> location.href = "../views/Cliente/product-single.php?id='.$producto.'"</script>';
-
+    echo '<script> 
+            swal.fire({
+                icon: "error",
+                title: "No puedes enviar un comentario vacio",
+                confirmButtonText: "OK"
+            }).then(function() {
+                window.location = "../views/Cliente/product-single.php?id='.$producto.'";
+            });</script>';
 }
 
 

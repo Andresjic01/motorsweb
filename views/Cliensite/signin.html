@@ -40,6 +40,8 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/styleLogin.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
 </head>
 
@@ -58,15 +60,15 @@
           <form class="text-left clearfix" action="../../controllers/registrarUserEx.php" method="POST">
             <div class="row ">
               <div class="form-group col-md-6">
-                <input type="text" class="form-control"  placeholder="identificacion" name="identificacion">
+                <input type="text" class="form-control"  placeholder="identificacion o Nit" name="identificacion">
               </div>
               <div class="form-group col-md-6">
-                <select name="tipo_doc" id="" class="form-control form-group ">
-                  <option disabled selected>Selecione una opcion</option>
+                <select style="margin:0; height: 45px;" name="tipo_doc" id="" class="form-control form-group ">
+                  <option  value="" selected>Selecione una opcion</option>
                   <option value="Cc">CC</option>
                   <option value="Ce">CE</option>
                   <option value="Pasaporte">PASAPORTE</option>
-                  <option value=""></option>
+                  <option value="Nit">Nit</option>
                 </select>
               </div>
               <div class="form-group col-md-6">
@@ -89,7 +91,7 @@
               </div>
               <div class="form-group col-md-12">
                 <select name="rol" id="roles" class="form-control form-group ">
-                  <option disabled selected>¿Que deseas hacer en la plataforma?</option>
+                  <option value="" selected>¿Que deseas hacer en la plataforma?</option>
                   <option value="Cliente">Comprar</option>
                   <option value="Vendedor">Vender</option>
                   

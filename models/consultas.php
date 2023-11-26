@@ -33,8 +33,14 @@
             $f = $result -> fetch();
 
             if($f){
-                echo '<script> alert("El usuario ya existe") </script>';
-                echo "<script>location.href='../views/Cliensite/login.html'</script>";
+                echo '<script> 
+                swal.fire({
+                icon: "error",
+                title: "El usuario ya existe",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliensite/login.html";
+                });</script>';
             }else{
 
 
@@ -63,8 +69,14 @@
             //ejecutamos el insert
             $result->execute();
 
-            echo '<script> alert("Has creado tu cuenta con exito") </script>';
-            echo "<script>location.href='../views/Cliensite/signin.html'</script>";
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Has creado tu cuenta con exito",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliensite/login.html";
+                });</script>';
             }
         }
 
@@ -284,10 +296,15 @@
             $result->bindParam(":id", $id);
 
             $result->execute();
+            
 
-            echo '<script> alert("Usuario Eliminado") </script>';
-            echo "<script>location.href='../views/administrador/ver-usuarios.php'</script>";            
-
+            echo "<script>swal.fire({
+                icon: 'success',
+                title: 'Usuario Eliminado',
+                confirmButtonText: 'Ok'
+            }).then(function() {
+                window.location = '../views/administrador/ver-usuarios.php';
+            });</script>";
         }
         //Se logra ver el perfil esta funcion es universal para todos los roles
         public function verPerfil($id){
@@ -344,9 +361,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Producto eliminado") </script>';
-            echo "<script>location.href='../views/administrador/verProductos.php'</script>";            
-
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Producto eliminado",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/administrador/verProductos.php";
+                });</script>';
         }
 
         // Modulos productos insertar
@@ -384,9 +406,16 @@
 
                 //ejecutamos el insert
                 $result->execute();
-    
-                echo '<script> alert("Has añadido con exito el producto") </script>';
-                echo "<script>location.href='../views/administrador/registrarProducto.php'</script>";
+
+
+                echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Has añadido con exito el producto",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/administrador/registrarProducto.php";
+                });</script>';
         }
 
         // editar la foto del administrador
@@ -469,9 +498,16 @@
                 
                 //ejecutamos el insert
                 $result->execute();
-    
-                echo '<script> alert("Has añadido con exito el Servicio") </script>';
-                echo "<script>location.href='../views/administrador/registrarServicios.php'</script>";
+
+
+                echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Has añadido con exito el Servicio",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/administrador/registrarServicios.php";
+                });</script>';
         }
 
         // Mostrar servicios
@@ -562,8 +598,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Servicio eliminado") </script>';
-            echo "<script>location.href='../views/administrador/verServicios.php'</script>";            
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Servicio eliminado",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/administrador/verServicios.php";
+                });</script>';
 
         }
 
@@ -687,9 +729,16 @@
 
                 //ejecutamos el insert
                 $result->execute();
-    
-                echo '<script> alert("Has añadido con exito el producto") </script>';
-                echo "<script>location.href='../views/Vendedor/registrarProducto.php'</script>";
+
+
+                echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Has añadido con exito el producto",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/registrarProducto.php";
+                });</script>';
         }
 
         // Mostrar Los Productos desde el Vendedor
@@ -759,9 +808,15 @@
                 
                 //ejecutamos el insert
                 $result->execute();
-    
-                echo '<script> alert("Has añadido con exito el Servicio") </script>';
-                echo "<script>location.href='../views/Vendedor/registrarServicio.php'</script>";
+
+                echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Has añadido con exito el Servicio",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/registrarServicio.php";
+                });</script>';
         }
         
         // Mostrar servicios
@@ -801,8 +856,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Servicio eliminado") </script>';
-            echo "<script>location.href='../views/Vendedor/verServicios.php'</script>";            
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Servicio eliminado",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/verServicios.php";
+                });</script>';
 
         }
 
@@ -901,8 +962,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Producto eliminado") </script>';
-            echo "<script>location.href='../views/Vendedor/verProductos.php'</script>";            
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Producto eliminado",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/verProductos.php";
+                });</script>';
 
         }
 
@@ -1134,9 +1201,14 @@
 
             $result->execute();
 
-            echo '<script> alert("La cita fue cancelada") </script>';
-            echo '<script>location.href="../views/Vendedor/VerCitasP.php?"</script>';            
-
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "La cita fue cancelada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/VerCitasP.php";
+                });</script>';
         }
         //Aceptar citas
         public function aceptarCitaVendedor($id, $aceptar){
@@ -1156,8 +1228,14 @@
 
             $result->execute();
 
-            echo '<script> alert("La cita fue aceptada") </script>';
-            echo '<script>location.href="../views/Vendedor/VerCitasA.php?"</script>';       
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "La cita fue aceptada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/VerCitasA.php";
+                });</script>';
 
         }
 
@@ -1177,9 +1255,14 @@
 
             $result->execute();
 
-            echo '<script> alert("La cita fue hecha y dado por terminada") </script>';
-            echo '<script>location.href="../views/Vendedor/VerCitas.php?"</script>';       
-
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "La cita fue hecha y dado por terminada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Vendedor/VerCitas.php";
+                });</script>';
         }
 
         //Mostrar citas para reagendar
@@ -1204,6 +1287,32 @@
             
 
 
+
+        }
+
+        //mostrar los ventas (por ventas)
+        public function mostrarVentas($Id){
+
+            $f = null;
+
+            $objConexion = new Conexion();
+            $conexion = $objConexion -> get_conexion();
+
+            $buscar = "SELECT * FROM ventas A
+            INNER JOIN productos B ON A.Producto = B.IdProducto
+            INNER JOIN usuarios C ON B.InfoVendedor = C.Identificacion
+            WHERE Identificacion=:Id";
+            $result = $conexion -> prepare ($buscar);
+
+            $result-> bindParam(':Id', $Id);
+
+            $result -> execute();
+
+            while ($resultado = $result->fetch()){
+                $f[] = $resultado;
+            }
+            
+            return $f;
 
         }
 
@@ -1368,9 +1477,14 @@
 
             $result-> execute();
 
-        
-            echo '<script> alert("La queja o denuncia fue registrada") </script>';
-            echo "<script> location.href = '../views/Cliente/denunciar.php'</script>";
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "La queja o denuncia fue registrada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliente/denunciar.php";
+                });</script>';
         }
 
         //Mostrar las denuncias hechas por el cliente
@@ -1441,9 +1555,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Su queja a sido eliminada") </script>';
-            echo '<script>location.href="../views/Cliente/Denuncias.php"</script>';            
-
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Su queja a sido eliminada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliente/Denuncias.php";
+                });</script>';
         }
 
         //Registrar una Cita 
@@ -1466,10 +1585,14 @@
 
 
             $result-> execute();
-
-        
-            echo '<script> alert("Tu cita fue registrada correctamente") </script>';
-            echo "<script> location.href = '../views/Cliente/service.php'</script>";
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Tu cita fue registrada correctamente",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliente/service.php";
+                });</script>';
         }
 
         //Cancelar cita cliente
@@ -1490,9 +1613,14 @@
 
             $result->execute();
 
-            echo '<script> alert("Su cita Fue cancelada") </script>';
-            echo '<script>location.href="../views/Cliente/Citas.php?"</script>';            
-
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Su cita Fue cancelada",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliente/Citas.php";
+                });</script>';
         }
 
         //Modificar cita cliente
@@ -1519,10 +1647,6 @@
             }).then(function() {
                 window.location = "../views/Cliente/Citas.php";
             });</script>';
-
-            
-
-
 
         }
 
@@ -1618,6 +1742,85 @@
             return $f;
         }
             
+        public function insertarVenta($Id, $productos, $total){
+            $objConexion = new Conexion();
+            $conexion = $objConexion-> get_conexion();
+
+            $registrar = "INSERT INTO tlbventas (Comprador,Fecha,Total) values(:Id, NOW(), :total) ";
+
+            $result = $conexion -> prepare($registrar);
+
+            $result->bindParam(":Id", $Id);
+            $result->bindParam(":total", $total);
+            $result-> execute();
+
+            $id_compra = $conexion->lastInsertId();
+
+            foreach($productos as $f){
+                $id_producto = $f['Id'];
+
+                $proComprado= "INSERT INTO ventas(IdVenta, IdComprador, Fecha, Producto, Unidades, PrecioUnitario) VALUES(:IdVenta, :Id, NOW(), :Producto, :Unidades, :PrecioUnitario)";
+                $resultCompra = $conexion -> prepare($proComprado);
+                $resultCompra->bindParam(":IdVenta", $id_compra);
+                $resultCompra->bindParam(":Id", $Id);
+                $resultCompra->bindParam(":Producto", $id_producto);
+                $resultCompra->bindParam(":Unidades", $f['cantidad']);
+                $resultCompra->bindParam(":PrecioUnitario", $f['precio']);
+                $resultCompra-> execute();
+
+                $restarCantidad = "UPDATE productos SET cantidad = cantidad - :cantidad_vendida, Vendidos = Vendidos + :cantidad_vendida WHERE idProducto = :id_producto";
+                $stmtRestar = $conexion->prepare($restarCantidad);
+                $stmtRestar->bindParam(":cantidad_vendida", $f['cantidad']);
+                $stmtRestar->bindParam(":id_producto", $id_producto);
+                $stmtRestar->execute();
+            }
+
+            echo '<script> 
+                swal.fire({
+                icon: "success",
+                title: "Procede al pago",
+                confirmButtonText: "OK"
+                }).then(function() {
+                window.location = "../views/Cliente/checkout.php";
+                });</script>';
+
+            unset($_SESSION['carrito']);
+        }
+
+        //mostrar comentarios DE LOS PRODUCTOS
+        public function mostrarHistorial($id){
+            $f = null;
+
+            $objConexion = new Conexion();
+            $conexion = $objConexion -> get_conexion();
+
+            $buscar ="SELECT * FROM comentarios A
+            INNER JOIN productos B ON A.ProductoId = B.IdProducto
+            INNER JOIN usuarios C ON A.IdCliente = C.Identificacion
+            WHERE ProductoId=:producto";
+
+            $buscar ="SELECT * FROM ventas A
+            INNER JOIN productos B ON A.Producto = B.IdProducto
+            INNER JOIN usuarios C ON B.InfoVendedor = C.Identificacion
+            WHERE IdComprador = :id";
+
+            $result = $conexion -> prepare($buscar);
+
+            $result -> bindParam(":id", $id);
+            
+
+            $result-> execute();
+
+            while ($resultado = $result->fetch()){
+                $f[] = $resultado;
+            }
+            
+            return $f;
+        }
+
+        
+
+        
 
 
 

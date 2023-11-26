@@ -93,7 +93,7 @@ require_once("../../controllers/mostrarInfoVendedor.php");
                                 <h1>
                                     Citas pendientes
                                 </h1>
-                                <p>Elige la accion que desea realizar "aceptar" ,"reagendar" o "cancelar"</p>
+                                <p>Aqui estan todas tus citas terminadas</p>
                             </div>
                         </div>
                     </div>

@@ -507,7 +507,7 @@ function cargarDenuncias()
   $result = $objConsultas->mostrarQuejasAmin();
 
   if (!isset($result)) {
-    echo '<h2>No hay Productos registrados registrados</h2>';
+    echo '<h2>No hay Denuncias o Sugerencias en este momento</h2>';
   } else {
     foreach ($result as $f) {
       echo '

@@ -32,13 +32,27 @@
 
         }
         else{
-            echo '<script> alert("Por favor complete todos los campos") </script>';
-            echo "<script>location.href='../views/Cliensite/signin.html'</script>";
+
+            echo '<script> 
+            swal.fire({
+                icon: "error",
+                title: "Por favor complete todos los campos",
+                confirmButtonText: "OK"
+            }).then(function() {
+                window.location = "../views/Cliensite/signin.html";
+            });</script>';
+        
         }
 
     }else{
-        echo ' <script>alert("Las claves no coinciden.")</script> ';
-        echo " <script>location.href='../views/Cliensite/signin.html'</script>";
+        echo '<script> 
+        swal.fire({
+            icon: "error",
+            title: "Las claves no coinciden.",
+            confirmButtonText: "OK"
+        }).then(function() {
+            window.location = "../views/Cliensite/signin.html";
+        });</script>';
     }
 
 ?>

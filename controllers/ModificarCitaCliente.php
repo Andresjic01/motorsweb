@@ -22,8 +22,15 @@
 
         }
         else{
-            echo '<script> alert("Por favor complete todos los campos") </script>';
-            echo "<script>location.href='../views/Cliente/Citas.php'</script>";
+
+            echo '<script> 
+            swal.fire({
+                icon: "error",
+                title: "Por favor complete todos los campos",
+                confirmButtonText: "OK"
+            }).then(function() {
+                window.location = "../views/Cliente/Citas.php";
+            });</script>';
         }
 
 ?>

@@ -216,6 +216,8 @@ function cargarProductosVendedor() {
                     <td>'.$f[ 'NomProducto' ] . '</td>
                     <td>'.$f[ 'Proveedor' ]. '</td>
                     <td>'.$f[ 'Categoria' ] .'</td>
+                    <td>'.$f[ 'Cantidad' ] .'</td>
+                    <td>'.$f[ 'Vendidos' ] .'</td>
                     <td>'.$f[ 'Precio' ] .'</td>
                     <td><a href="modificarProducto.php?id='.$f[ 'IdProducto' ].'" class="btn btn-primary"><i class="ti-pencil-alt " ></i>  Editar</a></td>
                     <td><a href="../../controllers/eliminarProducVendedor.php?id='.$f[ 'IdProducto' ].'" class="btn btn-danger"><i class="ti-trash " ></i>  Eliminar</a></td>
@@ -666,7 +668,7 @@ function mostrarCitasTermindas(){
     
 
         if (!isset($result)) {
-            echo '<h2>Hasta este momento no te han solitado ninguna cita</h2>';
+            echo '<h2>Hasta este momento no has terminado ninguna cita</h2>';
         } else {
             foreach ($result as $f) {
 
@@ -680,6 +682,31 @@ function mostrarCitasTermindas(){
     </tr>';
     }
 }
+}
+
+// Mostrar ventas (por ventas)
+function cargarVentasReportes()
+{
+    $Id = $_SESSION['id'];
+  $objConsultas = new Consultas();
+  $result = $objConsultas->mostrarVentas($Id);
+
+  if (!isset($result)) {
+    echo '<h2>No hay ventas hasta ahora</h2>';
+  } else {
+    foreach ($result as $f) {
+      echo '
+              <tr>
+                <td>' . $f['IdVenta'] . '</td>
+                <td>' . $f['NomProducto'] . '</td>
+                <td>' . $f['IdComprador'] . '</td>
+                <td>' . $f['Fecha'] . '</td>
+                <td>' . $f['PrecioUnitario'] . '</td>
+               </tr>
+              ';
+    }
+  }
+
 }
 
 ?>
