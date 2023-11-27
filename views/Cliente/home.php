@@ -106,38 +106,31 @@ require_once("../../controllers/mostrarInfoCliente.php");
 	</div>
 </section> -->
 
-<section class="products section bg-gray">
+<section class="products section bg-gray cdestacadas">
+	<div class="container">
 		<div class="row">
 			<div class="title text-center">
 				<h2>Mas vendidos</h2>
 			</div>
 		</div>
-		<div class="row">
+	
+		
+	<div id="cdestacadas">
+		<div class="container">
+			<div class="row clasesDes">
 			
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb imagenesP" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb imagenesP card-destacadas" ">
 						<span class="bage">Descuento</span>
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-1.jpg" alt="product-img" style="height: 400px;" />
-									
-										<div class="preview-meta">
-					<div class="calif">
-						<ul class="star-calif">
-							<li>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-										<i class="fa-solid fa-star"></i>
-							</li>
-						</ul>
-					</div>
+						<img class="img-responsive" src="../Cliensite/images/shop/products/product-1.jpg" alt="product-img" style="height: 400px;" />		
+							<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -147,24 +140,24 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Amortiguador de maletero</a></h4>
-						<p class="price">$200</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 					</div>
 
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb" ">
 						<img class="img-responsive" src="../Cliensite/images/shop/products/product-2.png" alt="product-img" style="height: 400px;"/>
 						<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -183,15 +176,15 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb" ">
 						<img class="img-responsive" src="../Cliensite/images/shop/products/product-3.jpg" alt="product-img" style="height: 400px;" />
 						<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -209,15 +202,15 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb" ">
 						<img class="img-responsive" src="../Cliensite/images/shop/products/product-4.jpg" alt="product-img" style="height: 400px;" />
 						<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -235,15 +228,15 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb">
 						<img class="img-responsive" src="../Cliensite/images/shop/products/product-5.jpg" alt="product-img"  style="height: 400px;"/>
 						<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -261,15 +254,15 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
+					<div class="product-thumb" ">
 						<img class="img-responsive" src="../Cliensite/images/shop/products/product-6.jpg" alt="product-img"  style="height: 400px;"/>
 						<div class="preview-meta">
 							<ul>
-								<li>
+								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
 										<i class="tf-ion-ios-search-strong"></i>
 									</span>
-								</li>
+								</li> -->
 								<li>
 			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
 								</li>
@@ -285,120 +278,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
-						<span class="bage">Sale</span>
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-7.jpg" alt="product-img" style="height: 400px;"/>
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Parabrisas</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-8.jpg" alt="product-img" style="height: 400px;"/>
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Portabicicletas</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb" data-aos="zoom-in"  data-aos-duration="1500">
-						<img class="img-responsive" src="..
-						/Cliensite/images/shop/products/product-9.jpg" alt="product-img" style="height: 400px; "/>
-						<div class="preview-meta">
-							<ul>
-								<li>
-									<span  data-toggle="modal" data-target="#product-modal">
-										<i class="tf-ion-ios-search-strong"></i>
-									</span>
-								</li>
-								<li>
-			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
-								</li>
-								<li>
-									<a href="#!"><i class="tf-ion-android-cart"></i></a>
-								</li>
-							</ul>
-                      	</div>
-					</div>
-					<div class="product-content">
-						<h4><a href="product-single.html">Retrovisores</a></h4>
-						<p class="price">$200</p>
-					</div>
-				</div>
-			</div>
-		
-		<!-- Modal -->
-		<div class="modal product-modal fade" id="product-modal">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<i class="tf-ion-close"></i>
-			</button>
-		  	<div class="modal-dialog " role="document">
-		    	<div class="modal-content">
-			      	<div class="modal-body">
-			        	<div class="row">
-			        		<div class="col-md-8 col-sm-6 col-xs-12">
-			        			<div class="modal-image">
-				        			<img class="img-responsive" src="../Cliensite/images/shop/products/modal-product.jpg" alt="product-img" style="height: 400px; "/>
-			        			</div>
-			        		</div>
-			        		<div class="col-md-4 col-sm-6 col-xs-12">
-			        			<div class="product-short-details">
-			        				<h2 class="product-title">GM Pendant, Basalt Grey</h2>
-			        				<p class="product-price">$200</p>
-			        				<p class="product-short-description">
-			        					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
-			        				</p>
-			        				<a href="views/Cliensite/cart.html" class="btn btn-main">Add To Cart</a>
-			        				<a href="views/Cliensite/product-single.html" class="btn btn-transparent">View Product Details</a>
-			        			</div>
-			        		</div>
-			        	</div>
-			        </div>
-		    	</div>
-		  	</div>
-		</div>
-		<!-- /.modal -->
+	</div>
+	
 
-		</div>
 		</div>
 	</div>
 </section>
@@ -407,6 +289,8 @@ require_once("../../controllers/mostrarInfoCliente.php");
 <?php
 	include("include-footer.php")
 ?>
+
+
    
 	</body>
 	</html>
