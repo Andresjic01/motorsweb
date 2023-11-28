@@ -176,6 +176,36 @@ require_once("../../controllers/mostrarInfoCliente.php");
 								<li>
 									<a href="#!"><i class="tf-ion-android-cart"></i></a>
 								</li>
+								<li>
+											<a href="#!" onclick="mostrarPopup()"><i class="tf-ion-eye"></i></a>
+										</li>
+
+										<!-- Ventana emergente -->
+										<div class="popup" id="miPopup">
+        <!-- Contenido de la ventana emergente -->
+												<img src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img">
+												<h2>XD Wheels</h2>
+												<p>Este componente específico está diseñado para encajar perfectamente en el sistema correspondiente de tu automóvil.
+
+</p>
+												<p>Precio: $200</p>
+												<button onclick="cerrarPopup()">Cerrar</button>
+											</div>
+
+											<!-- Fondo oscuro detrás de la ventana emergente -->
+											<div class="overlay" id="miOverlay" onclick="cerrarPopup()"></div>
+
+											<script>
+												function mostrarPopup() {
+													document.getElementById("miPopup").style.display = "block";
+													document.getElementById("miOverlay").style.display = "block";
+												}
+
+												function cerrarPopup() {
+													document.getElementById("miPopup").style.display = "none";
+													document.getElementById("miOverlay").style.display = "none";
+												}
+										</script>
 							</ul>
                       	</div>
 					</div>
@@ -323,6 +353,33 @@ require_once("../../controllers/mostrarInfoCliente.php");
 				</div>
 			</div>
 	</section>
+
+	<!-- <section id="ver-more">
+	<div class="boton" onclick="mostrarPopup()">Abrir Ventana Emergente</div>
+	<div class="popup" id="miPopup">
+        <p>¡Hola! Esto es una ventana emergente.</p>
+        <button onclick="cerrarPopup()">Cerrar</button>
+    </div>
+
+    <!-- Fondo oscuro detrás de la ventana emergente -->
+    <!-- <div class="overlay" id="miOverlay" onclick="cerrarPopup()"></div>
+
+    <script>
+        function mostrarPopup() {
+            document.getElementById("miPopup").style.display = "block";
+            document.getElementById("miOverlay").style.display = "block";
+        }
+
+        function cerrarPopup() {
+            document.getElementById("miPopup").style.display = "none";
+            document.getElementById("miOverlay").style.display = "none";
+        }
+    </script>
+
+	</section> --> -->
+
+
+
 
 	<div class="row">
 			<div class="title text-center">

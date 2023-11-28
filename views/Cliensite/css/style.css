@@ -2497,3 +2497,9 @@
   background: #2c5aff  url("../IMG/mover-al-siguiente-Blanco.png");
   background-size: 100%;
 } */
+
+
+.Ver-mas{
+  position: absolute;
+  right: 120px;
+}

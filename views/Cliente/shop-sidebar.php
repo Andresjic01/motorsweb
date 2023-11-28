@@ -190,7 +190,6 @@ require_once("../../controllers/mostrarInfoCliente.php");
 										<input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
 										<input type="hidden" value="1" name="cantidad" id="cantidad"> <br>
 										<button id="agregar"> <i class="tf-ion-android-cart"></i> </button>
-										
 									</form>
 										
 									</li>
