@@ -3,6 +3,8 @@ require_once("../../models/conexion.php");
 require_once("../../models/consultas.php");
 require_once("../../models/seguridadCliente.php");
 require_once("../../controllers/mostrarInfoCliente.php");
+include ("../../controllers/infoCarrito.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -79,11 +81,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 						<li class=""><a data-toggle="tab" href="#reviews" aria-expanded="false">Comentarios (3)</a></li>
 					</ul>
 					<div class="tab-content patternbg">
-						<div id="details" class="tab-pane fade active in">
-							<h4>Descripcion del producto</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut per spici</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
-						</div>
+						<?php
+							productounicoDescripcion();
+						?>
 						<div id="reviews" class="tab-pane fade">
 							<?php
 									comentarios();
@@ -260,29 +260,16 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							<i class="tf-ion-social-instagram"></i>
 						</a>
 					</li>
-					<li>
-						<a href="https://www.twitter.com/themefisher">
-							<i class="tf-ion-social-twitter"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.pinterest.com/themefisher/">
-							<i class="tf-ion-social-pinterest"></i>
-						</a>
-					</li>
 				</ul>
 				<ul class="footer-menu text-uppercase">
 					<li>
-						<a href="contact.html">CONTACT</a>
+						<a href="denunciar.php">¿Tienes alguna queja?</a>
 					</li>
 					<li>
-						<a href="shop.html">SHOP</a>
+						<a href="shop-slidebar.html">REPUESTOS</a>
 					</li>
 					<li>
-						<a href="pricing.html">Pricing</a>
-					</li>
-					<li>
-						<a href="contact.html">PRIVACY POLICY</a>
+						<a href="#">POLITICAS DE PRIVACIDAD</a>
 					</li>
 				</ul>
 				<p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a></p>

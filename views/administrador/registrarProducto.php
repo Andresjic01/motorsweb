@@ -121,7 +121,7 @@ require_once("../../controllers/mostrarInfoAdmin.php");
                                                         placeholder="Nombre producto" name="nomProducto">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <input type="text" class="form-control" placeholder="Proveedor"
+                                                    <input type="text" class="form-control" placeholder="Marca"
                                                         name="proveedor">
                                                 </div>
                                                 <div class="form-group col-md-6">

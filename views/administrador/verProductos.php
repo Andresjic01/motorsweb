@@ -122,7 +122,7 @@
                                                 <tr>
                                                     <th>idProducto</th>
                                                     <th>Nombre producto</th>
-                                                    <th>proveedor</th>
+                                                    <th>Marca</th>
                                                     <th>categoria</th>
                                                     <th>precio</th>
                                                     <th>Vendedor</th>

@@ -638,7 +638,7 @@ function modalProductos(){
                             <h2 class="product-title">'.$f['NomProducto'].'</h2>
                             <p class="product-price">$'.$f['Precio'].'</p>
                             <p class="product-short-description">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
+                                '.$f['Descripcion'].'
                             </p>
                             <a href="cart.html" class="btn btn-main">Añadir al carrito</a>
                             <a href="product-single.php?id='.$f['IdProducto'].'" class="btn btn-transparent">Ver detalles del producto</a>
@@ -1016,31 +1016,29 @@ function productounico(){
 						ESPACION PARA LA DECRIpCION 
                         
 					</p>
+                    <form action="" method="POST">
 					
-					
-					<div class="product-size">
-						<span>Size:</span>
-						<select class="form-control">
-							<option>S</option>
-							<option>M</option>
-							<option>L</option>
-							<option>XL</option>
-						</select>
-					</div>
 					<div class="product-quantity">
 						<span>Cantidad:</span>
 						<div class="product-quantity-slider">
-							<input id="product-quantity" type="text" value="0" name="product-quantity">
+							<input  type="text" value="0" name="cantidad" id="cantidad">
 						</div>
 					</div>
 					<div class="product-category">
 						<span>Categorias:</span>
 						<ul>
 							<li><a href="product-single.html">Productos</a></li>
-							<li><a href="product-single.html">Llant</a></li>
+							<li><a href="product-single.html">Llanta</a></li>
 						</ul>
 					</div>
-					<a href="cart.html" class="btn btn-main mt-20">Añadir al carrito</a>
+                        <input type="hidden" value="'.$f['IdProducto'].'" name="id" id="id">
+                        <input type="hidden" value="'.$f['NomProducto'].'" name="nombre" id="nombre">
+                        <input type="hidden" value="'.$f['Foto1'].'" name="fotos" id="nombre">
+                        <input type="hidden" value="'.$f['Precio'].'" name="precio" id="precio">
+						<button id="agregar" type="submit" name="btnAccion" value="agregar" ><a class="btn btn-main mt-20">Añadir al carrito</a></button>
+
+                        </form>
+                    
 				</div>
 			</div>
 		</div>
@@ -1214,6 +1212,33 @@ function historialCompras()
     </tr>
       ';
   }
+
+}
+
+function productounicoDescripcion(){
+
+    $idCli= $_SESSION['id'];
+
+    $producto=$_GET['id'];
+
+    $objConsultas = new consultas();
+    $result = $objConsultas->productoUnico($producto);
+
+
+
+    foreach ($result as $f){
+        echo'
+        <div id="details" class="tab-pane fade active in">
+							<h4>Descripcion del producto</h4>
+							<p>'.$f['Descripcion'].'</p>
+		</div>
+        
+        ';
+    }
+
+
+
+
 
 }
 ?>

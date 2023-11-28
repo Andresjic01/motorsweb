@@ -123,7 +123,7 @@ require_once("../../controllers/mostrarInfoVendedor.php");
                                                 <tr>
                                                     <th>idProducto</th>
                                                     <th>Nombre producto</th>
-                                                    <th>proveedor</th>
+                                                    <th>Marca</th>
                                                     <th>categoria</th>
                                                     <th>En inventario</th>
                                                     <th>Vendidos</th>
