@@ -63,8 +63,9 @@
    font-family: 'Open Sans', sans-serif;
    color: #757575;
    font-size: 15px;
-   
- }
+}
+
+
  
  h1, h2, h3, h4, h5, h6 {
    font-family: 'Montserrat', sans-serif;
@@ -957,12 +958,22 @@
  .product-item {
    margin-bottom: 80px;
    padding: 10px;
-   background: #c6d1d4;
+   background: transparent;
+   transition: .3s;
    -webkit-box-shadow: 7px 11px 21px -4px rgba(0,0,0,0.67);
  -moz-box-shadow: 7px 11px 21px -4px rgba(0,0,0,0.67);
  box-shadow: 7px 11px 21px -4px rgba(0,0,0,0.67);
    border-radius: 10px;
  }
+
+ .product-item:hover{
+  background-color: #d21212cb;
+ 
+ }
+ .product-item .Pdescri{
+  color: #fff;
+ }
+
  .product-item .product-thumb {
    position: relative;
  }
@@ -1029,12 +1040,12 @@
   opacity: 1;
   transform: translateY(-20px);
 }
-.product-item .product-content {
-  /* text-align: center; */
+.product-content{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .product-item .product-content h4 {
   font-size: 16px;
   font-weight: 400;
@@ -2442,16 +2453,16 @@
  }
  
 
- #cdestacadas{
+ /* #cdestacadas{
   width: 100%;
   position: relative;
   text-align:left ;
-  padding: 150px 0 100px;
+  padding: 20px 0 20px;
 }
 
-#cdestacadas .card-destacadas{
+#cdestacadas .card-destacadas{ */
     /* background: #292c36; */
-    border-radius: 4px;
+    /* border-radius: 4px;
     position: relative;
 }
 
@@ -2463,9 +2474,26 @@
     background: #292c36;
     padding: 14px;
     transition: .4s;
-}
+} */
 
 
-#cdestacadas .card-destacadas .cont-info:hover{
-    background: var(--primary-color);
+
+
+/* .slick-prev{
+  right: 40px;
+  background: #c6c6c6 url("../../Cliensite/images/arrow-products/mover-al-siguiente.png");
+  background-size: 100%;
+  transform: rotate(-180deg);
+
 }
+
+.slick-next{
+  background: #c6c6c6 url("../../Cliensite/images/arrow-products/mover-al-siguiente\ Blanco.png");
+  background-size: 100%;
+
+}
+
+.slick-arrow:hover{
+  background: #2c5aff  url("../IMG/mover-al-siguiente-Blanco.png");
+  background-size: 100%;
+} */

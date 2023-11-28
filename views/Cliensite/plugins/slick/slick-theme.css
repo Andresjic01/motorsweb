@@ -1,6 +1,6 @@
-@charset 'UTF-8';
+/* @charset 'UTF-8';
 /* Slider */
-.slick-loading .slick-list
+/* .slick-loading .slick-list
 {
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
@@ -68,11 +68,11 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: #D21312;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -80,7 +80,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -35px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -202,4 +202,4 @@
 {
     opacity: .75;
     color: black;
-}
+} 

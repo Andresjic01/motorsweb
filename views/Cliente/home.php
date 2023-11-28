@@ -15,9 +15,48 @@ require_once("../../controllers/mostrarInfoCliente.php");
 -->
 
 <html lang="en">
-<?php
-	include("include-head.php")
-?>
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Motors Web</title>
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="aviato" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="../Cliensite/images/favicon.png" />
+  
+  <!-- Aos Animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- icons -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+  <!-- Themefisher Icon font -->
+  <script src="https://kit.fontawesome.com/a6c0b2cb0d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../Cliensite/plugins/themefisher-font/style.css">
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="../Cliensite/plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
+  <!-- Animate css -->
+  <link rel="stylesheet" href="../Cliensite/plugins/animate/animate.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="../Cliensite/plugins/slick/slick.css">
+  <link rel="stylesheet" href="../Cliensite/plugins/slick/slick-theme.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="../Cliensite/css/style.css">
+  
+</head>
 <body id="body">
 
 <?php
@@ -115,16 +154,16 @@ require_once("../../controllers/mostrarInfoCliente.php");
 		</div>
 	
 		
-	<div id="cdestacadas">
+	<section id="cdestacadas">
 		<div class="container">
 			<div class="row clasesDes">
-			
 			<div class="col-md-4">
-				<div class="product-item">
-					<div class="product-thumb imagenesP card-destacadas" ">
+				<div class="product-item" >
+					<div class="product-thumb imagenesP card-destacadas">
 						<span class="bage">Descuento</span>
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-1.jpg" alt="product-img" style="height: 400px;" />		
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />		
 							<div class="preview-meta">
+							<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -142,16 +181,17 @@ require_once("../../controllers/mostrarInfoCliente.php");
 					</div>
 					<div class="product-content cont-info">
 						<h3>XD Wheels</h3>
-                        <p>XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+                        <p>200$</p>
 					</div>
 
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
-					<div class="product-thumb" ">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-2.png" alt="product-img" style="height: 400px;"/>
+					<div class="product-thumb" >
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;"/>
 						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -167,9 +207,185 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Barras de techo</a></h4>
-						<p class="price">$200</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" >
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" >
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<div class="row">
+			<div class="title text-center">
+				<h2>Rines</h2>
+			</div>
+		</div>
+
+	<section id="cdestacadas">
+		<div class="container">
+			<div class="row clasesDes">
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb imagenesP card-destacadas" ">
+						<span class="bage">Descuento</span>
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />		
+							<div class="preview-meta">
+							<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
 					</div>
 				
 				</div>
@@ -177,8 +393,9 @@ require_once("../../controllers/mostrarInfoCliente.php");
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb" ">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-3.jpg" alt="product-img" style="height: 400px;" />
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
 						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -194,17 +411,18 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Bujias</a></h4>
-						<p class="price">$230</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb" ">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-4.jpg" alt="product-img" style="height: 400px;" />
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
 						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -220,17 +438,18 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Bujias de precalentamiento</a></h4>
-						<p class="price">$200</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-5.jpg" alt="product-img"  style="height: 400px;"/>
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
 						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -246,17 +465,18 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Correa trapecial</a></h4>
-						<p class="price">$200</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="product-item">
 					<div class="product-thumb" ">
-						<img class="img-responsive" src="../Cliensite/images/shop/products/product-6.jpg" alt="product-img"  style="height: 400px;"/>
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
 						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
 							<ul>
 								<!-- <li>
 									<span  data-toggle="modal" data-target="#product-modal">
@@ -272,23 +492,476 @@ require_once("../../controllers/mostrarInfoCliente.php");
 							</ul>
                       	</div>
 					</div>
-					<div class="product-content">
-						<h4><a href="../Cliensite/product-single.html">Juntas</a></h4>
-						<p class="price">$200</p>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
 					</div>
 				</div>
 			</div>
-	</div>
+	</section>
 	
+	<div class="row">
+			<div class="title text-center">
+				<h2>servicios</h2>
+			</div>
+		</div>
+
+	<section id="cdestacadas">
+		<div class="container">
+			<div class="row clasesDes">
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb imagenesP card-destacadas" ">
+						<span class="bage">Descuento</span>
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />		
+							<div class="preview-meta">
+							<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<div class="row">
+			<div class="title text-center">
+				<h2>Sistema Electrico</h2>
+			</div>
+		</div>
+
+	<section id="cdestacadas">
+		<div class="container">
+			<div class="row clasesDes">
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb imagenesP card-destacadas" ">
+						<span class="bage">Descuento</span>
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />		
+							<div class="preview-meta">
+							<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img" style="height: 400px;" />
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="product-item">
+					<div class="product-thumb" ">
+						<img class="img-responsive" src="../Cliensite/images/arrow-products/chinmay-jade.jpg" alt="product-img"  style="height: 400px;"/>
+						<div class="preview-meta">
+						<p class="Pdescri">XD Wheels ha estado redefiniendo el rendimiento dentro y fuera del asfalto desde 1995 con la búsqueda incesante de afrontar las posibilidades.</p>
+							<ul>
+								<!-- <li>
+									<span  data-toggle="modal" data-target="#product-modal">
+										<i class="tf-ion-ios-search-strong"></i>
+									</span>
+								</li> -->
+								<li>
+			                        <a href="#" ><i class="tf-ion-ios-heart"></i></a>
+								</li>
+								<li>
+									<a href="#!"><i class="tf-ion-android-cart"></i></a>
+								</li>
+							</ul>
+                      	</div>
+					</div>
+					<div class="product-content cont-info">
+						<h3>XD Wheels</h3>
+                        <p>200$</p>
+					</div>
+				</div>
+			</div>
+	</section>
 
 		</div>
 	</div>
 </section>
 
 
-<?php
-	include("include-footer.php")
-?>
+<footer class="footer section text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="social-media">
+					<li>
+						<a href="#">
+							<i class="tf-ion-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="tf-ion-social-instagram"></i>
+						</a>
+					</li>
+				</ul>
+				<ul class="footer-menu text-uppercase">
+					<li>
+						<a href="contact.php">CONTACTO</a>
+					</li>
+					<li>
+						<a href="shop-slidebar.html">REPUESTOS</a>
+					</li>
+					<li>
+						<a href="#">POLITICAS DE PRIVACIDAD</a>
+					</li>
+				</ul>
+				<p class="copyright-text">©MotorsWeb 2023, Developed by <a href="#">MotorsWeb</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <!-- Main jQuery -->
+    <script src="../Cliensite/plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="../Cliensite/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="../Cliensite/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Instagram Feed Js -->
+    <script src="../Cliensite/plugins/instafeed/instafeed.min.js"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="../Cliensite/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Count Down Js -->
+    <script src="../Cliensite/plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+    <!-- slick Carousel -->
+    <script src="../Cliensite/plugins/slick/slick.min.js"></script>
+    <script src="../Cliensite/plugins/slick/slick-animation.min.js"></script>
+    <!-- Google Mapl -->
+    <script src="../Cliensite/https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="../Cliensite/plugins/google-map/gmap.js"></script>
+	<!-- Animaciones -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+
+			$(document).ready(function(){
+            $('.clasesDes').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+        });
+
+      </script>
+		</script>
+    <!-- Main Js File -->
+    <script src="../Cliensite/js/script.js"></script>
 
 
    
