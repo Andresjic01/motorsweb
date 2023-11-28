@@ -14,6 +14,8 @@
     $clave=$_POST['clave'];
     $clave2=$_POST['clave2'];
     $rol=$_POST['rol'];
+    $direccion=$_POST['direccion'];
+    $descripcion=$_POST['descripcion'];
     $estado = ($rol === 'Vendedor') ? 'Pendiente' : 'Activo';
     // verificamos que las claves coincidan
 
@@ -28,7 +30,7 @@
             //creamos el objeto apartir de la clase
             //creamos el objeto a partir de la clase para enviar los argumentos a la funcion en el modelo(archivo consultas)
             $objConsultas = new Consultas();
-            $result = $objConsultas -> insertarUserEx($identificacion, $tipo_doc, $nombres, $apellidos, $email, $telefono , $claveMd, $rol, $estado);
+            $result = $objConsultas -> insertarUserEx($identificacion, $tipo_doc, $nombres, $apellidos, $email, $telefono , $claveMd, $rol, $estado, $direccion, $descripcion);
 
         }
         else{

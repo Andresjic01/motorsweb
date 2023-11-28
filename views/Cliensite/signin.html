@@ -51,13 +51,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <div class="block text-center">
+        <div class="block text-center" style="margin-top:25px;">
           <a class="logo" href="index.html">
             <img src="images/logo.png" alt="" style="width: 160px;	height: 50px;">
           </a>
           <h2 class="text-center">Crea tu cuenta</h2>
           
-          <form class="text-left clearfix" action="../../controllers/registrarUserEx.php" method="POST">
+          <form class="text-left clearfix" style="margin: 0 0 0 0;" action="../../controllers/registrarUserEx.php" method="POST">
             <div class="row ">
               <div class="form-group col-md-6">
                 <input type="text" class="form-control"  placeholder="identificacion o Nit" name="identificacion">
@@ -78,7 +78,7 @@
                 <input type="text" class="form-control"  placeholder="Apellido" name="apellidos">
               </div>
               <div class="form-group col-md-6">
-                <input type="text" class="form-control"  placeholder="Email" name="email">
+                <input type="email" class="form-control"  placeholder="Email" name="email">
               </div>
               <div class="form-group col-md-6">
                 <input type="text" class="form-control"  placeholder="Telefono" name="telefono">
@@ -89,6 +89,14 @@
               <div class="form-group col-md-6">
                 <input type="password" class="form-control"  placeholder="Confirmar" name="clave2">
               </div>
+              <div class="form-group col-md-12" id="direccion">
+                <input type="text" class="form-control"  placeholder="Direccion" name="direccion">
+              </div>
+              <div class="form-group col-md-12" id="descripcion" >
+                <label for=""style="color:white;">¿Quienes son?</label>
+                <textarea style="border-radius: 15px;" name="descripcion" id="" cols="65" rows="2" placeholder="Agrega una breve descripcion de quienes son y lo que hacen"></textarea>
+              </div>
+              
               <div class="form-group col-md-12">
                 <select name="rol" id="roles" class="form-control form-group ">
                   <option value="" selected>¿Que deseas hacer en la plataforma?</option>

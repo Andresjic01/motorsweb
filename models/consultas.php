@@ -9,7 +9,7 @@
         //Modulo usuarios insertar
 
         // insertar usuarios de forma externa (Registro)
-        public function insertarUserEx( $identificacion, $tipo_doc, $nombres,$apellidos ,$email,$telefono ,$claveMd, $rol, $estado
+        public function insertarUserEx( $identificacion, $tipo_doc, $nombres,$apellidos ,$email,$telefono ,$claveMd, $rol, $estado, $direccion, $descripcion
         ){
             //Creamos el objeto de la conexion
             $objConexion = new Conexion();
@@ -48,7 +48,7 @@
 
 
             //creamos la variable que contiene la consulta a ejecutar
-            $insertar ="INSERT INTO usuarios(Identificacion,TipoDocumento,Nombres,Apellidos,Email,Telefono,Clave,Rol,Estado) VALUES(:identificacion, :tipo_doc, :nombres,:apellidos ,:email,:telefono ,:claveMd, :rol, :estado)";
+            $insertar ="INSERT INTO usuarios(Identificacion,TipoDocumento,Nombres,Apellidos,Email,Telefono,Clave,Rol,Estado,Direccion,DescripcionTaller) VALUES(:identificacion, :tipo_doc, :nombres,:apellidos ,:email,:telefono ,:claveMd, :rol, :estado, :direccion, :descripcion)";
 
             //Preparamos lo necesario para ejecutar la funcion anterior
 
@@ -65,6 +65,8 @@
             $result->bindparam(":claveMd", $claveMd);
             $result->bindparam(":rol", $rol);
             $result->bindparam(":estado", $estado);
+            $result->bindparam(":direccion", $direccion);
+            $result->bindparam(":descripcion", $descripcion);
 
             //ejecutamos el insert
             $result->execute();

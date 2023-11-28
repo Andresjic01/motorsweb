@@ -103,6 +103,19 @@ div .tab-content form .comentario{
     background-color: #000;
 }
 
+#descripcion{
+    display: none;
+    text-align: center;
+    color:black;
+}
+#descripcion textarea{
+    width: 100%;
+    color:black;
+}
+#direccion{
+    display: none;
+}
+
 
 
 

@@ -1,3 +1,9 @@
+<html>
+    <head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> -->
+    </head>
+
 <?php
 
     use PHPMailer\PHPMailer\PHPMailer;
@@ -15,7 +21,7 @@
             $objConexion = new Conexion;
             $conexion = $objConexion -> get_conexion();
 
-            $consultar = "SELECT * FROM usuario WHERE identificacion=:identificacion AND email=:email";
+            $consultar = "SELECT * FROM usuarios WHERE identificacion=:identificacion AND email=:email";
 
             $result = $conexion -> prepare($consultar);
 
@@ -790,7 +796,14 @@
 
 
             }else{
-                echo '<script> alert("El usuario no se encuentra registrado en el sistema") </script>';
+              echo "<script> 
+              swal.fire({
+                  icon: 'error',
+                  title: 'Este usuario no se encuentra registrado en el sistema',
+                  confirmButtonText: 'OK'
+              }).then(function() {
+                  window.location = '../views/Cliensite/forget-password.html';
+              });</script>";
                 // echo "<script>location.href='../views/Cliensite/forget-password.html'</script>";
             }
 
@@ -799,3 +812,4 @@
     }
 
 ?>
+</html>
